@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ameer's Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <div class="sidebar">
+            <h1>Ameer Hamza</h1>
+            <hr>
+            <div id="location">
+                <p>{{ data.location }}</p>
+            </div>
+            <div id="institute">
+                <p>{{ data.institute }}</p>
+            </div>
+            <div id="email">
+                <p>{{ data.email }}</p>
+            </div>
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/{{ data.linkedin }}">LinkedIn</a>
+            </div>
+            <div id="github">
+                <a href="https://www.github.com/{{ data.github }}">GitHub</a>
+            </div>
+            <div id="google-scholar">
+                <a href="https://scholar.google.com/citations?user={{ data.google_scholar }}">Google Scholar</a>
+            </div>
+            <div id="researchgate">
+                <a href="https://www.researchgate.net/profile/{{ data.researchgate }}">ResearchGate</a>
+            </div>
+            <div id="orcid">
+                <a href="https://orcid.org/{{ data.orcid }}">ORCID</a>
+            </div>
+    </body>
+</html>
+

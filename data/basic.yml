@@ -5,7 +5,7 @@ location: "Tallahassee, FL, US"
 
 # Social/Links
 linkedin: "a-hamza"
-google-scholar: ""
+google_scholar: "sqGZQE0AAAAJ"
 orcid: "0000-0001-7341-0412"
 github: "a-hamza-r"
 facebook: "hamzzzu"
@@ -19,5 +19,5 @@ phone: "+1(850)405-8891"
 # School/Institute
 department: "Department of Computer Science"
 institute: "Florida State University"
-current-desig: "Graduate Teaching Assistant"
+current_desig: "Graduate Teaching Assistant"
 
