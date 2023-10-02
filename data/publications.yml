@@ -1,0 +1,11 @@
+publications:
+  - title: "Lockstep Composition for Unbalanced Loops"
+    your_position: 0 # your position in the list of authors
+    authors: # should be sorted
+      - "Ameer Hamza"
+      - "Grigory Fedyukovich"
+    year: 2023
+    venue: "International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS)"
+    published: "yes"
+    url: "https://link.springer.com/chapter/10.1007/978-3-031-30820-8_18"
+    preprint: "TACAS_paper.pdf"
