@@ -6,6 +6,7 @@ publications:
       - "Grigory Fedyukovich"
     year: 2023
     venue: "International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS)"
-    published: "yes"
+    published: 0  # 0 for published, 1 for accepted, 2 for submitted
     url: "https://link.springer.com/chapter/10.1007/978-3-031-30820-8_18"
     preprint: "TACAS_paper.pdf"
+    artifact: "aeval"

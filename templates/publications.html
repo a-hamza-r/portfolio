@@ -1,53 +1,53 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Ameer's Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-    </head>
-    <body>
-        <header>
-            <nav>
+{% extends "base.html" %}
+
+{% block title %}Publications{% endblock %}
+
+{% block content %}
+    <h1>Publications</h1>
+    {% for publication in publications %}
+        <div id="publication-container"> 
+            <div id=publication-text>
+                <div id="publication-title">
+                    <a href={{ publication.url }} title={{ publication.url }}>{{ publication.title }}</a>
+                </div>
+                <div id="publication-details">
+                    <p>
+                        <span style="font-weight: bold;">
+                            {% if publication.published == 0 %}
+                                Published
+                            {% elif publication.published == 1 %}
+                                Accepted
+                            {% else %}
+                                Submitted
+                            {% endif %}
+                        </span>
+                        in {{ publication.venue }}, {{ publication.year }}
+                    </p>
+                    <p><i>Recommended citation</i>: {{ publication.citation | safe }}</p>
+                </div>
+            </div>
+            <div id="publication-links">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/publications">Publications</a></li>
-                    <li><a href="/experience">Work Experience</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/cv">CV</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li>
+                        <div>
+                            <i class="fas fa-project-diagram" style="font-size: 13px"></i>
+                            <a href="#">Project</a>
+                        </div>
+                    <li>
+                        <div>
+                            <i class="fas fa-file-code"></i>
+                            <a href="www.github.com/{{ basic.github }}/{{ publication.artifact }}">Artifact</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <i class="fas fa-file-pdf"></i>
+                            <a href="/{{ publication.preprint }}">Preprint</a>
+                        </div>
+                    </li>
                 </ul>
-            </nav>
-        </header>
-        <div class="sidebar">
-            <h1>Ameer Hamza</h1>
-            <hr>
-            <div id="location">
-                <p>{{ data.location }}</p>
-            </div>
-            <div id="institute">
-                <p>{{ data.institute }}</p>
-            </div>
-            <div id="email">
-                <p>{{ data.email }}</p>
-            </div>
-            <div id="linkedin">
-                <a href="https://www.linkedin.com/in/{{ data.linkedin }}">LinkedIn</a>
-            </div>
-            <div id="github">
-                <a href="https://www.github.com/{{ data.github }}">GitHub</a>
-            </div>
-            <div id="google-scholar">
-                <a href="https://scholar.google.com/citations?user={{ data.google_scholar }}">Google Scholar</a>
-            </div>
-            <div id="researchgate">
-                <a href="https://www.researchgate.net/profile/{{ data.researchgate }}">ResearchGate</a>
-            </div>
-            <div id="orcid">
-                <a href="https://orcid.org/{{ data.orcid }}">ORCID</a>
             </div>
         </div>
-        <footer>
-        &copy; 2023 My Static Website. All rights reserved.
-    </footer>
-    </body>
-</html>
+    {% endfor %}
+{% endblock %}
 
