@@ -50,5 +50,10 @@ def cv_process():
 def experience_process():
     return render_template('experience.html', basic=_basic);
 
+@app.route('/static/<path:filename>')
+def files_process(filename):
+    file_path = path.join(app.root_path, 'static',  filename)
+    return app.send_static_file(file_path);
+
 if __name__ == '__main__':
     app.run(debug=True);
