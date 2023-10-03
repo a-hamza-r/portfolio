@@ -1,53 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Ameer's Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/publications">Publications</a></li>
-                    <li><a href="/experience">Work Experience</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/cv">CV</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="sidebar">
-            <h1>Ameer Hamza</h1>
-            <hr>
-            <div id="location">
-                <p>{{ data.location }}</p>
-            </div>
-            <div id="institute">
-                <p>{{ data.institute }}</p>
-            </div>
-            <div id="email">
-                <p>{{ data.email }}</p>
-            </div>
-            <div id="linkedin">
-                <a href="https://www.linkedin.com/in/{{ data.linkedin }}">LinkedIn</a>
-            </div>
-            <div id="github">
-                <a href="https://www.github.com/{{ data.github }}">GitHub</a>
-            </div>
-            <div id="google-scholar">
-                <a href="https://scholar.google.com/citations?user={{ data.google_scholar }}">Google Scholar</a>
-            </div>
-            <div id="researchgate">
-                <a href="https://www.researchgate.net/profile/{{ data.researchgate }}">ResearchGate</a>
-            </div>
-            <div id="orcid">
-                <a href="https://orcid.org/{{ data.orcid }}">ORCID</a>
-            </div>
-        </div>
-        <footer>
-        &copy; 2023 My Static Website. All rights reserved.
-    </footer>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}CV{% endblock %}
+
+{% block content %}
+    <h1>CV Content</h1>
+    <p>This is the content for CV.</p>
+{% endblock %}
 
