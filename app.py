@@ -48,7 +48,10 @@ def cv_process():
 
 @app.route('/experience')
 def experience_process():
-    return render_template('experience.html', basic=_basic);
+    experience_path = path.join(app.root_path, 'data', 'experience.yml')
+    _teachings = read_yaml(experience_path)['teachings'];
+    _jobs = read_yaml(experience_path)['jobs'];
+    return render_template('experience.html', basic=_basic, teachings=_teachings, jobs=_jobs);
 
 @app.route('/static/<path:filename>')
 def files_process(filename):

@@ -5,12 +5,12 @@
 {% block content %}
     <h1>Publications</h1>
     {% for publication in publications %}
-        <div id="publication-container"> 
+        <div class="display-container"> 
             <div id=publication-text>
-                <div id="publication-title">
+                <div class="display-title">
                     <a href={{ publication.url }} title={{ publication.url }}>{{ publication.title }}</a>
                 </div>
-                <div id="publication-details">
+                <div class="display-details">
                     <p>
                         <span style="font-weight: bold;">
                             {% if publication.published == 0 %}

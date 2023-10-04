@@ -1,76 +1,89 @@
 teachings:
-  - title: "Teaching Assistant"
-    course:
-      - "Operating Systems (CS-370)"
-    venue: "Computer Science, LUMS"
-    term: "Fall 2017"
-    location: "Lahore, PK"
-
   - title: "Graduate Teaching Assistant"
-    course:
-      - "Software Engineering (CEN-4020)"
-    venue: "Computer Science, FSU"
-    term: "Fall 2019"
+    courses:
+      - type: "U"
+        title: "Web Programming and Design (CGS-3066)"
+    institution: "Computer Science dept., FSU"
+    term: "Summer 2023"
     location: "Tallahassee, FL"
 
   - title: "Graduate Teaching Assistant"
-    course:
-      - "Software Engineering (CEN-4020)"
-    venue: "Computer Science, FSU"
-    term: "Spring 2021"
-    location: "Tallahassee, FL"
-
-  - title: "Graduate Teaching Assistant"
-    course:
-      - "Undergraduate: Theory of Computation (COT-4420)"
-      - "Graduate: Introduction to Computer Theory (CGS-5429)"
-    venue: "Computer Science, FSU"
-    term: "Fall 2022"
-    location: "Tallahassee, FL"
-
-  - title: "Graduate Teaching Assistant"
-    course:
-      - "Undergraduate: Theory of Computation (COT-4420)"
-      - "Graduate: Introduction to Computer Theory (CGS-5429)"
-    venue: "Computer Science, FSU"
+    courses:
+      - type: "U"
+        title: "Theory of Computation (COT-4420)"
+      - type: "G"
+        title: "Introduction to Computer Theory (CGS-5429)"
+    institution: "Computer Science dept., FSU"
     term: "Spring 2023"
     location: "Tallahassee, FL"
 
   - title: "Graduate Teaching Assistant"
-    course:
-      - "Web Programming and Design (CGS-3066)"
-    venue: "Computer Science, FSU"
-    term: "Summer 2023"
+    courses:
+      - type: "U"
+        title: "Theory of Computation (COT-4420)"
+      - type: "G"
+        title: "Introduction to Computer Theory (CGS-5429)"
+    institution: "Computer Science dept., FSU"
+    term: "Fall 2022"
     location: "Tallahassee, FL"
 
-work:
-  - title: "Backend Developer"
-    remote: "no"
-    start: "October 2017"
-    end: "February 2018"
+  - title: "Graduate Teaching Assistant"
+    courses:
+      - type: "U"
+        title: "Software Engineering (CEN-4020)"
+    institution: "Computer Science dept., FSU"
+    term: "Spring 2021"
+    location: "Tallahassee, FL"
+
+  - title: "Graduate Teaching Assistant"
+    courses:
+      - type: "U"
+        title: "Software Engineering (CEN-4020)"
+    institution: "Computer Science dept., FSU"
+    term: "Fall 2019"
+    location: "Tallahassee, FL"
+
+  - title: "Teaching Assistant"
+    courses:
+      - type: "U"
+        title: "Operating Systems (CS-370)"
+    institution: "Computer Science dept., LUMS"
+    term: "Fall 2017"
     location: "Lahore, PK"
 
-  - title: "Technical Author"
-    remote: "yes"
-    start: "June 2017"
-    end: "May 2018"
-    location: "Lahore, PK"
 
+jobs:
   - title: "Graduate Research Assistant"
-    remote: "no"
-    start: "June 2019"
-    end: "April 2020"
+    remote: false
+    start: "May 2020"
+    end: "Present"
+    company: "Florida State University"
     location: "Tallahassee, FL"
 
   - title: "Computer Science Lab Intern"
-    remote: "yes"
+    remote: true
     start: "October 2021"
     end: "March 2022"
+    company: "SRI International"
     location: "Menlo Park, CA"
 
   - title: "Graduate Research Assistant"
-    remote: "no"
-    start: "May 2020"
-    end: "Present"
+    remote: false
+    start: "June 2019"
+    end: "April 2020"
+    company: "Florida State University"
     location: "Tallahassee, FL"
 
+  - title: "Technical Author"
+    remote: true
+    start: "June 2017"
+    end: "May 2018"
+    company: "Educative.io"
+    location: "US"
+
+  - title: "Backend Developer"
+    remote: false
+    start: "October 2017"
+    end: "February 2018"
+    company: "Black Collective"
+    location: "Lahore, PK"
