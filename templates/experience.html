@@ -1,91 +1,83 @@
-{% extends "base.html" %}
+{% extends "two_pane_template.html" %}
 
 {% block title %}Experience{% endblock %}
+{% block main_heading_two_pane %}Work Experience{% endblock %}
+{% block first_pane_heading %}Teaching{% endblock %}
+{% block second_pane_heading %}Job{% endblock %}
 
-{% block content %}
-    <h1>Work Experience</h1>
-    <div id="work-exp">
-        <div id="teaching">
-            <span style="text-align: center">
-                <h2>Teaching</h2>
-            </span>
-            {% for job in teachings %}
-                <div class="display-container job-container">
-                    <div class="job-two-side-display">
-                        <div class="display-title left-align">
-                            {{ job.title }}
-                        </div>
-                        <div class="right-align">
-                            <i class="fa fa-map-marker"></i>
-                            {{ job.location }}
-                        </div>
-                    </div>
-                    <div class="job-two-side-display">
-                        <div class="left-align">
-                            Term:
-                            <span style="font-weight: bold;">
-                                {{ job.term }}
-                            </span>
-                        </div>
-                        <div class="right-align">
-                            <i class="fas fa-university"></i>
-                            {{ job.institution }}
-                        </div>
-                    </div>
-                    <div class="display-details" id="course-info">
-                        <ul>
-                            {% for course in job.courses %}
-                                <li>
-                                    Taught
-                                    <span style="font-style: italic;">
-                                    {% if course.type == "U" %}
-                                        Undergrad
-                                    {% else %}
-                                        Grad
-                                    {% endif %}
-                                    </span>
-                                    course: 
-                                    <span style="font-weight: bold;">
-                                          {{ course.title }}
-                                    </span>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            {% endfor %}
+{% block first_pane_content %}
+    {% macro customize_teaching(teaching) %}
+        <div class="two-side-display">
+            <div class="display-title left-align">
+                {{ teaching.title }}
+            </div>
+            <div class="right-align">
+                <i class="fa fa-map-marker"></i>
+                {{ teaching.location }}
+            </div>
         </div>
+        <div class="two-side-display">
+            <div class="left-align">
+                Term:
+                <span style="font-weight: bold;">
+                    {{ teaching.term }}
+                </span>
+            </div>
+            <div class="right-align">
+                <i class="fas fa-university"></i>
+                {{ teaching.institution }}
+            </div>
+        </div>
+        <div class="display-details" id="course-info">
+            <ul>
+                {% for course in teaching.courses %}
+                    <li>
+                        Taught
+                        <span style="font-style: italic;">
+                        {% if course.type == "U" %}
+                            Undergrad
+                        {% else %}
+                            Grad
+                        {% endif %}
+                        </span>
+                        course: 
+                        <span style="font-weight: bold;">
+                              {{ course.title }}
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endmacro %}
+    
+    {{ generate_containers(teachings, customize_teaching) }}
+{% endblock %}
 
-        <div id="job">
-            <span style="text-align: center">
-                <h2>Jobs</h2>
-            </span>
-            {% for job in jobs %}
-                <div class="display-container job-container">
-                    <div class="job-two-side-display">
-                        <div class="display-title left-align">
-                            {{ job.title }}
-                        </div>
-                        <div class="right-align">
-                            <i class="fa fa-map-marker"></i>
-                            {{ job.location }}
-                            {% if job.remote %}
-                                (Remote)
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="job-two-side-display">
-                        <div class="left-align">
-                            {{ job.start }} - {{ job.end }}
-                        </div>
-                        <div class="right-align">
-                            <i class="fas fa-building"></i>
-                            {{ job.company }}
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+{% block second_pane_content %}
+    {% macro customize_job(job) %}
+        <div class="two-side-display">
+            <div class="display-title left-align">
+                {{ job.title }}
+            </div>
+            <div class="right-align">
+                <i class="fa fa-map-marker"></i>
+                {{ job.location }}
+                {% if job.remote %}
+                    (Remote)
+                {% endif %}
+            </div>
         </div>
-    </div>
+        <div class="two-side-display">
+            <div class="left-align">
+                {{ job.start }} - {{ job.end }}
+            </div>
+            <div class="right-align">
+                <i class="fas fa-building"></i>
+                {{ job.company }}
+            </div>
+        </div>
+    {% endmacro %}
+    
+    {{ generate_containers(jobs, customize_job) }}
 {% endblock %}
 
