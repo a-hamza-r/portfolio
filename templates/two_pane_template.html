@@ -1,54 +1,5 @@
 {% extends "base_template.html" %}
 
-{% macro institute_or_company(item) %}
-    {% if 'institute' in item %}
-        <i class="fas fa-university"></i>
-        {{ item.institute }}
-    {% else %}
-        <i class="fas fa-building"></i>
-        {{ item.company }}
-    {% endif %}
-{% endmacro %}
-
-{% macro generate_containers(data, content_function) %}
-    {% for item in data %}
-        <div class="display-container make-column-view">
-            <div class="two-side-display">
-                <div class="display-title left-align">
-                    {{ item.title }}
-                </div>
-                <div class="right-align">
-                    {% if item.location %}
-                        <i class="fas fa-map-marker"></i>
-                        {{ item.location }}
-                    {% endif %}
-                    {% if item.remote %}
-                        (Remote)
-                    {% endif %}
-                </div>
-            </div>
-            {% if 'term' in item or ('start' in item and 'end' in item) or 'institute' in item or 'company' in item %}
-                <div class="two-side-display">
-                    <div class="left-align">
-                        {% if 'term' in item %}
-                            Term:
-                            <span style="font-weight: bold;">
-                                {{ item.term }}
-                            </span>
-                        {% elif 'start' in item and 'end' in item %}
-                            {{ item.start }} - {{ item.end }}
-                        {% endif %}
-                    </div>
-                    <div class="right-align">
-                        {{ institute_or_company(item) }}
-                    </div>
-                </div>
-            {% endif %}
-            {{ content_function(item) }}
-        </div>
-    {% endfor %}
-{% endmacro %}
-
 {% block content %}
 <h1>{% block main_heading_two_pane %}{% endblock %}</h1>
     <div class="main-container-two-pane">

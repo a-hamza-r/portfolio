@@ -57,7 +57,7 @@ jobs:
     remote: false
     start: "May 2020"
     end: "Present"
-    company: "Florida State University"
+    institute: "Florida State University"
     location: "Tallahassee, FL"
 
   - title: "Computer Science Lab Intern"
@@ -71,7 +71,7 @@ jobs:
     remote: false
     start: "June 2019"
     end: "April 2020"
-    company: "Florida State University"
+    institute: "Florida State University"
     location: "Tallahassee, FL"
 
   - title: "Technical Author"

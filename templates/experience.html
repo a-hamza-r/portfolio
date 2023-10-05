@@ -1,11 +1,41 @@
 {% extends "two_pane_template.html" %}
+{% import "macros.html" as macros %}
 
 {% block title %}Experience{% endblock %}
 {% block main_heading_two_pane %}Work Experience{% endblock %}
 {% block first_pane_heading %}Teaching{% endblock %}
 {% block second_pane_heading %}Job{% endblock %}
 
+<!-- generic macros -->
+{% macro left1(work) %}
+    <div class="display-title">
+        {{ work.title }}
+    </div>
+{% endmacro %}
+
+{% macro right1(work) %}
+    <i class="fas fa-map-marker"></i>
+    {{ work.location }}
+    {% if work.remote %}
+        (Remote)
+    {% endif %}
+{% endmacro %}
+
+{% macro right2(work) %}
+    {{ macros.institute_or_company(work) }}
+{% endmacro %}
+
+
+<!-- first pane -->
 {% block first_pane_content %}
+    <!-- local macros -->
+    {% macro left2(teaching) %}
+        Term:
+        <span style="font-weight: bold;">
+            {{ teaching.term }}
+        </span>
+    {% endmacro %}
+
     {% macro customize_teaching(teaching) %}
         <div class="display-details" id="course-info">
             <ul>
@@ -29,13 +59,22 @@
         </div>
     {% endmacro %}
     
-    {{ generate_containers(teachings, customize_teaching) }}
+    <!-- generate containers -->
+    {{ macros.generate_containers(teachings, customize_teaching, left1, right1, left2, right2) }}
 {% endblock %}
 
+
+<!-- second pane -->
 {% block second_pane_content %}
+    <!-- local macros -->
+    {% macro left2(job) %}
+        {{ job.start }} - {{ job.end }}
+    {% endmacro %}
+
     {% macro customize_job(job) %}
     {% endmacro %}
     
-    {{ generate_containers(jobs, customize_job) }}
+    <!-- generate containers -->
+    {{ macros.generate_containers(jobs, customize_job, left1, right1, left2, right2) }}
 {% endblock %}
 
