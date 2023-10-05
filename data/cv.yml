@@ -89,7 +89,7 @@ skills:
     - "HDL/VHDL"
     - "Verilog"
 
-  tools_frameworks_libraries:
+  tools_fw_libs:
     - "LLVM Compiler Infrastructure"
     - "SeaHorn Verification Framework"
     - item: "SAT/SMT Solvers"
@@ -119,6 +119,11 @@ skills:
         - "Gradle"
     - "MongoDB"
     - "Docker"
+    - "Git/GitHub"
+    - "Bugzilla"
+    - "JIRA Bug Tracker"
+    - "Firebase"
+    - "LaTeX"
   
   web:
     - "HTML"
@@ -131,13 +136,6 @@ skills:
         - "Boot"
         - "MVC"
     - "Flask"
-
-  other:
-    - "Git/GitHub"
-    - "Bugzilla"
-    - "JIRA Bug Tracker"
-    - "Firebase"
-    - "LaTeX"
 
   design:
     - "Adobe Photoshop"

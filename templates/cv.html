@@ -45,6 +45,7 @@
     <!-- generate containers -->
     {{ macros.generate_containers(educations, customize_education, left1, right1, left2, right2) }}
 
+    <!-- make below functionality as a macro, since it is highly repeated -->
     <br>
     <div class="cv-containers">
         <h2>Work Experience</h2>
@@ -77,6 +78,39 @@
         </div>
     </div> 
 
+    <br>
+
+    <div class="cv-containers">
+        <h2>Projects</h2>
+        <div class="main-container-two-pane">
+            <div class="first-pane">
+                <span style="text-align: center">
+                    <h3>Research</h3>
+                </span>
+                <ul class="links-to-other-pages">
+                    {% for project in research_projs %}
+                        <li>
+                            <a href="#">{{ project.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="second-pane">
+                <span style="text-align: center">
+                    <h3>Development</h3>
+                </span>
+                <ul class="links-to-other-pages">
+                    {% for project in dev_projs %}
+                        <li>
+                            <a href="#">{{ project.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
 
 
@@ -84,7 +118,17 @@
 {% block second_pane_content %}
     <div class="cv-containers">
         {% for category, skills in skills.items() %}
-            <h2>{{ category }}</h2>
+            <h2>
+                {% if category == 'programming' %}
+                    {{ category | capitalize }} Languages
+                {% elif category == 'tools_fw_libs' %}
+                    Tools, Frameworks, and Libraries
+                {% elif category == 'web'  %}
+                    {{ category | capitalize }} Development
+                {% elif category == 'design' or category == 'other' %}
+                    {{ category | capitalize }}
+                {% endif %}
+            </h2>
             {% for skill in skills %}
                 {% if skill.item %}
                     <div class="skill-tag-with-subitems" onclick="toggleSubSkills(this)">

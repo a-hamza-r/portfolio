@@ -68,7 +68,13 @@ def cv_process():
     _jobs = _experiences['jobs'];
     publications_path = path.join(app.root_path, 'data', 'publications.yml')
     _publications = read_yaml(publications_path)['publications'];
-    return render_template('cv.html', educations=_educations, teachings=_teachings, jobs=_jobs, publications=_publications, presentations=_presentations, subreviews=_subreviews, skills=_skills, basic=_basic);
+    projects_path = path.join(app.root_path, 'data', 'projects.yml')
+    _research = read_yaml(projects_path)['research'];
+    _development = read_yaml(projects_path)['development'];
+    return render_template('cv.html', educations=_educations, teachings=_teachings, jobs=_jobs,
+                           publications=_publications, presentations=_presentations,
+                           research_projs=_research, dev_projs=_development,
+                           subreviews=_subreviews, skills=_skills, basic=_basic);
 
 
 @app.route('/experience')
