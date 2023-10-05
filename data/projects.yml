@@ -1,0 +1,96 @@
+research:
+  - title: "Computer Architecture Security Exploitation"
+    start: "January 2023"
+    end: "May 2023"
+    institute: "Florida State University"
+
+  - title: "Lockstep Composition for Unbalanced Loops"
+    start: "May 2020"
+    end: "Present"
+    institute: "Florida State University"
+    artifact: "aeval"
+
+  - title: "Verification of eBPF Programs"
+    start: "October 2021"
+    end: "Present"
+    company: "SRI International"
+    artifact: "ebpf-verifier"
+
+  - title: "Comparative Study of NLP Models"
+    start: "April 2020"
+    end: "May 2020"
+    institute: "Florida State University"
+
+  - title: "Performance of Language Features"
+    start: "June 2019"
+    end: "April 2020"
+    institute: "Florida State University"
+
+  - title: "HPC Application Analysis using Classification and Clustering"
+    start: "November 2019"
+    end: "December 2019"
+    institute: "Florida State University"
+
+  - title: "Automatic Assertion Generation"
+    start: "November 2019"
+    end: "December 2019"
+    institute: "Florida State University"
+
+  - title: "Branch Prediction Performance"
+    start: "October 2019"
+    end: "December 2019"
+    institute: "Florida State University"
+
+  - title: "Model Checking of Java Programs"
+    start: "January 2017"
+    end: "May 2017"
+    institute: "Lahore University of Management Sciences"
+
+  - title: "Program Binary Rearrangement"
+    start: "November 2017"
+    end: "December 2017"
+    institute: "Lahore University of Management Sciences"
+
+development:
+  - title: "Online portfolio"
+
+  - title: "Compiler for a Functional Language"
+    start: "September 2021"
+    end: "December 2021"
+    institute: "Florida State University"
+    artifact: "Compiler-For-a-Functional-Language"
+
+  - title: "Modifying jEdit"
+    start: "March 2019"
+    end: "May 2019"
+    institute: "Florida State University"
+
+  - title: "Peer-to-Peer Distributed File Storage System"
+    start: "August 2017"
+    end: "May 2018"
+    institute: "Lahore University of Management Sciences"
+
+  - title: "Parallelized Game of Life"
+    start: "November 2017"
+    end: "December 2017"
+    institute: "Lahore University of Management Sciences"
+
+  - title: "Pseudobot"
+    start: "March 2017"
+    end: "May 2017"
+    institute: "Lahore University of Management Sciences"
+
+  - title: "Dropbin - A Dropbox-like application"
+    start: "February 2016"
+    end: "March 2016"
+    institute: "Lahore University of Management Sciences"
+
+  - title: "Battleship AI"
+    start: "November 2016"
+    end: "December 2016"
+    institute: "Lahore University of Management Sciences"
+
+  - title: "Plants vs. Zombies Game"
+    start: "November 2014"
+    end: "December 2014"
+    institute: "Lahore University of Management Sciences"

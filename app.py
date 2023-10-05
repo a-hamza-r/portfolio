@@ -36,7 +36,11 @@ def publications_process():
 
 @app.route('/projects')
 def projects_process():
-    return render_template('projects.html', basic=_basic);
+    project_path = path.join(app.root_path, 'data', 'projects.yml')
+    _research_projs = read_yaml(project_path)['research'];
+    _dev_projs = read_yaml(project_path)['development'];
+    return render_template('projects.html', research_projs=_research_projs, dev_projs=_dev_projs,
+                           basic=_basic);
 
 @app.route('/contact')
 def contact_process():

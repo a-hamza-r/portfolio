@@ -29,13 +29,13 @@
         </div>
     {% endmacro %}
     
-    {{ generate_containers(teachings, customize_teaching, true, true) }}
+    {{ generate_containers(teachings, customize_teaching) }}
 {% endblock %}
 
 {% block second_pane_content %}
     {% macro customize_job(job) %}
     {% endmacro %}
     
-    {{ generate_containers(jobs, customize_job, false, false) }}
+    {{ generate_containers(jobs, customize_job) }}
 {% endblock %}
 
