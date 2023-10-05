@@ -253,7 +253,6 @@ textarea {
 }
 
 .skill-tag {
-    cursor: pointer;
     background-color: #ccc;
     color: #333;
     padding: 5px 10px;

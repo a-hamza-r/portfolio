@@ -55,29 +55,25 @@ awards:
 
 skills:
   programming:
-    - item: "C++"
+    - item: "C++ (11,14,17,20)"
       subitems:
         - "ELFIO"
         - "Qt"
         - "Boost"
-        - "Valgrind"
+        - "CMake"
     - "C"
     - "Rust"
-    - "Java"
-    - item: "Python"
+    - item: "Java"
       subitems:
-        - "Pandas"
-        - "SciPy"
-        - "NumPy"
-        - "Scikit-Learn"
-        - "Matplotlib"
-    - "C#"
+        - "Spring Boot"
+        - "Spring MVC"
+    - "Python"
+    - "C#/.NET"
     - item: "Golang"
       subitems:
         - "bazil.org/fuse"
     - "Haskell"
     - "MATLAB"
-    - "SQL"
     - "Unix/Linux System Programming"
     - "Bash/Shell Scripting"
     - "Network TCP/IP Programming"
@@ -86,7 +82,7 @@ skills:
         - "y86-64"
         - "x86 (Intel, AT&T)"
         - "RISC (MIPS, ARM)"
-    - "HDL/VHDL"
+    - "HDL"
     - "Verilog"
 
   tools_fw_libs:
@@ -102,7 +98,27 @@ skills:
       subitems:
         - "PyTorch"
         - "Keras"
-    - "Message Passing Interface - MPI"
+    - item: "Data Science"
+      subitems:
+        - "Pandas"
+        - "SciPy"
+        - "NumPy"
+        - "Scikit-Learn"
+        - "Matplotlib"
+        - "Jupyter"
+    - item: "Parallel Programming"
+      subitems:
+        - "Message Passing Interface - MPI"
+        - "PThreads"
+        - "OpenMP"
+    - "AFL Fuzzer"
+    - "GNU Binutils"
+    - "Valgrind"
+    - "Lex/Yacc"
+    - item: "Database Languages/Systems"
+      subitems:
+        - "SQL (MySQL)"
+        - "MongoDB"
     - item: "Testing"
       subitems:
         - "Selenium"
@@ -114,28 +130,39 @@ skills:
         - "LLDB"
     - item: "Build tools"
       subitems:
-        - "CMake"
         - "Ninja"
         - "Gradle"
-    - "MongoDB"
+    - item: "Security tools"
+      subitems:
+        - "WireShark"
+        - "PwnTools"
+        - "Ghidra"
+        - "IDA"
+        - "Angr/Pangr"
+        - "ssh"
     - "Docker"
     - "Git/GitHub"
     - "Bugzilla"
     - "JIRA Bug Tracker"
-    - "Firebase"
     - "LaTeX"
+    - "VirtualBox"
+    - item: "IDEs/Text Editors"
+      subitems:
+        - "Vim"
+        - "Eclipse"
+        - "IntelliJ"
   
   web:
     - "HTML"
     - "CSS"
-    - "JavaScript"
-    - "React.js"
-    - "REST API"
-    - item: "Spring"
+    - item: "JavaScript"
       subitems:
-        - "Boot"
-        - "MVC"
+        - "NPM"
+        - "React.js"
+        - "Node.js"
+    - "REST API"
     - "Flask"
+    - "Firebase"
 
   design:
     - "Adobe Photoshop"
