@@ -151,6 +151,36 @@ ul.navbar li a:hover {
 }
 
 
+/* CV page */
+#downloadable-cv {
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#downloadable-cv i {
+    margin-left: 10px;
+}
+
+#downloadable-cv i:hover {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+ul.links-to-other-pages{
+    list-style-type: none;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+ul.links-to-other-pages li {
+    margin: 0 10px; /* spacing around each list item */
+    padding: 8px 0;
+}
+
 /* Contact page */
 .form-group {
     margin-bottom: 20px;

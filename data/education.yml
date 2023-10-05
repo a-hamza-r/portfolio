@@ -1,16 +1,19 @@
 education:
-  - institute: "Florida State University (FSU)"
+  - institute: "Florida State University"
+    location: "Tallahassee, FL, US"
     degree: "Ph.D., Computer Science"
     gpa: 3.86
     graduation: "July 2024"
-    graduated: "no"
+    graduated: false
 
-  - institute: "Lahore University of Management Sciences (LUMS)"
+  - institute: "Lahore University of Management Sciences"
+    location: "Lahore, PK"
     degree: "Bachelors of Science (BS), Computer Science"
     graduation: "2018"
-    graduated: "yes"
+    graduated: true
 
-  - institute: "Government College University (GCU)"
+  - institute: "Government College University"
+    location: "Lahore, PK"
     degree: "Intermediate in Sciences"
     graduation: "2014"
-    graduated: "yes"
+    graduated: true

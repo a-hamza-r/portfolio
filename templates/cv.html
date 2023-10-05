@@ -1,9 +1,88 @@
-{% extends "base_template.html" %}
+{% extends "two_pane_template.html" %}
+{% import "macros.html" as macros %}
 
 {% block title %}CV{% endblock %}
+{% block main_heading_two_pane %}CV{% endblock %}
+{% block first_pane_heading %}Education{% endblock %}
+{% block second_pane_heading %}Presentations{% endblock %}
+<!-- Although the two pane view is designed to have 1 kind of information per pane, like on experience page (teachings and jobs), I am using the same structure here to have a more compact view. I will define the left pane view to be Education, but also add Work Experience and Publications summary. Likewise, for right pane, Presentations, then Subreviews, then Skills -->
 
-{% block content %}
-    <h1>CV Content</h1>
-    <p>This is the content for CV.</p>
+{% block before_panes %}
+    <div id="downloadable-cv">
+        Here is a concise one-pager resume: 
+        <a href="{{ url_for('files_process', filename='pdfs/resume.pdf') }}" target="_blank"><i class="fas fa-file-pdf"></i>
+        </a>
+    </div>
+{% endblock %}
+
+<!-- first pane -->
+{% block first_pane_content %}
+    <!-- local macros -->
+    {% macro left1(education) %}
+        <div class="display-title">
+            {{ education.institute }}
+        </div>
+    {% endmacro %}
+
+    {% macro right1(education) %}
+        <i class="fas fa-map-marker"></i>
+        {{ education.location }}
+    {% endmacro %}
+
+    {% macro left2(education) %}
+        {{ education.degree }}
+    {% endmacro %}
+
+    {% macro right2(education) %}
+        {{ education.graduation }}
+        {% if not education.graduated %}
+            (expected)
+        {% endif %}
+    {% endmacro %}
+
+    {% macro customize_education(item) %}{% endmacro %}
+
+    <!-- generate containers -->
+    {{ macros.generate_containers(educations, customize_education, left1, right1, left2, right2) }}
+
+    <br>
+    <span style="text-align: center">
+        <h2>Work Experience</h2>
+        <div class="main-container-two-pane">
+            <div class="first-pane">
+                <span style="text-align: center">
+                    <h3>Teaching</h3>
+                </span>
+                <ul class="links-to-other-pages">
+                    {% for teaching in teachings %}
+                        <li>
+                            <a href="#">{{ teaching.term }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="second-pane">
+                <span style="text-align: center">
+                    <h3>Jobs</h3>
+                </span>
+                <ul class="links-to-other-pages">
+                    {% for job in jobs %}
+                        <li>
+                            <a href="#">{{ job.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </span>
+    
+
+{% endblock %}
+
+
+<!-- second pane -->
+{% block second_pane_content %}
+    
 {% endblock %}
 

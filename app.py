@@ -9,12 +9,15 @@ def read_yaml(file_path):
         data = yaml.safe_load(file);
     return data;
 
+
 basic_path = path.join(app.root_path, 'data', 'basic.yml')
 _basic = read_yaml(basic_path);
+
 
 @app.route('/')
 def index_process():
     return render_template('index.html', basic=_basic);
+
 
 @app.route('/publications')
 def publications_process():
@@ -34,6 +37,7 @@ def publications_process():
         publication['citation'] = authors_citation + ', "' + publication['title'] + '" in ' + publication['venue'] + ', ' + str(publication['year']) + '.';
     return render_template('publications.html', publications=_publications, basic=_basic);
 
+
 @app.route('/projects')
 def projects_process():
     project_path = path.join(app.root_path, 'data', 'projects.yml')
@@ -42,13 +46,21 @@ def projects_process():
     return render_template('projects.html', research_projs=_research_projs, dev_projs=_dev_projs,
                            basic=_basic);
 
+
 @app.route('/contact')
 def contact_process():
     return render_template('contact.html', basic=_basic);
 
+
 @app.route('/cv')
 def cv_process():
-    return render_template('cv.html', basic=_basic);
+    education_path = path.join(app.root_path, 'data', 'education.yml')
+    _educations = read_yaml(education_path)['education'];
+    experience_path = path.join(app.root_path, 'data', 'experience.yml')
+    _teachings = read_yaml(experience_path)['teachings'];
+    _jobs = read_yaml(experience_path)['jobs'];
+    return render_template('cv.html', educations=_educations, teachings=_teachings, jobs=_jobs, basic=_basic);
+
 
 @app.route('/experience')
 def experience_process():
@@ -56,6 +68,7 @@ def experience_process():
     _teachings = read_yaml(experience_path)['teachings'];
     _jobs = read_yaml(experience_path)['jobs'];
     return render_template('experience.html', basic=_basic, teachings=_teachings, jobs=_jobs);
+
 
 @app.route('/static/<path:filename>')
 def files_process(filename):
