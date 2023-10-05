@@ -7,27 +7,6 @@
 
 {% block first_pane_content %}
     {% macro customize_teaching(teaching) %}
-        <div class="two-side-display">
-            <div class="display-title left-align">
-                {{ teaching.title }}
-            </div>
-            <div class="right-align">
-                <i class="fa fa-map-marker"></i>
-                {{ teaching.location }}
-            </div>
-        </div>
-        <div class="two-side-display">
-            <div class="left-align">
-                Term:
-                <span style="font-weight: bold;">
-                    {{ teaching.term }}
-                </span>
-            </div>
-            <div class="right-align">
-                <i class="fas fa-university"></i>
-                {{ teaching.institution }}
-            </div>
-        </div>
         <div class="display-details" id="course-info">
             <ul>
                 {% for course in teaching.courses %}
@@ -50,34 +29,13 @@
         </div>
     {% endmacro %}
     
-    {{ generate_containers(teachings, customize_teaching) }}
+    {{ generate_containers(teachings, customize_teaching, true, true) }}
 {% endblock %}
 
 {% block second_pane_content %}
     {% macro customize_job(job) %}
-        <div class="two-side-display">
-            <div class="display-title left-align">
-                {{ job.title }}
-            </div>
-            <div class="right-align">
-                <i class="fa fa-map-marker"></i>
-                {{ job.location }}
-                {% if job.remote %}
-                    (Remote)
-                {% endif %}
-            </div>
-        </div>
-        <div class="two-side-display">
-            <div class="left-align">
-                {{ job.start }} - {{ job.end }}
-            </div>
-            <div class="right-align">
-                <i class="fas fa-building"></i>
-                {{ job.company }}
-            </div>
-        </div>
     {% endmacro %}
     
-    {{ generate_containers(jobs, customize_job) }}
+    {{ generate_containers(jobs, customize_job, false, false) }}
 {% endblock %}
 

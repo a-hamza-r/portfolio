@@ -3,7 +3,7 @@ teachings:
     courses:
       - type: "U"
         title: "Web Programming and Design (CGS-3066)"
-    institution: "Computer Science dept., FSU"
+    institute: "Florida State University"
     term: "Summer 2023"
     location: "Tallahassee, FL"
 
@@ -13,7 +13,7 @@ teachings:
         title: "Theory of Computation (COT-4420)"
       - type: "G"
         title: "Introduction to Computer Theory (CGS-5429)"
-    institution: "Computer Science dept., FSU"
+    institute: "Florida State University"
     term: "Spring 2023"
     location: "Tallahassee, FL"
 
@@ -23,7 +23,7 @@ teachings:
         title: "Theory of Computation (COT-4420)"
       - type: "G"
         title: "Introduction to Computer Theory (CGS-5429)"
-    institution: "Computer Science dept., FSU"
+    institute: "Florida State University"
     term: "Fall 2022"
     location: "Tallahassee, FL"
 
@@ -31,7 +31,7 @@ teachings:
     courses:
       - type: "U"
         title: "Software Engineering (CEN-4020)"
-    institution: "Computer Science dept., FSU"
+    institute: "Florida State University"
     term: "Spring 2021"
     location: "Tallahassee, FL"
 
@@ -39,7 +39,7 @@ teachings:
     courses:
       - type: "U"
         title: "Software Engineering (CEN-4020)"
-    institution: "Computer Science dept., FSU"
+    institute: "Florida State University"
     term: "Fall 2019"
     location: "Tallahassee, FL"
 
@@ -47,7 +47,7 @@ teachings:
     courses:
       - type: "U"
         title: "Operating Systems (CS-370)"
-    institution: "Computer Science dept., LUMS"
+    institute: "Lahore University of Management Sciences"
     term: "Fall 2017"
     location: "Lahore, PK"
 
