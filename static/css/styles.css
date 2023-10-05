@@ -119,23 +119,21 @@ ul.navbar li a:hover {
     text-align: right;
 }
 
-
-/* Publication page */
-#publication-text {
+.single-pane-text {
     width: 60%;
 }
 
-#publication-links {
+.single-pane-links {
     display: flex;
     justify-content: flex-end; /* Align links to the right */
     width: 40%;
 }
 
-#publication-links ul {
+.single-pane-links ul {
     list-style-type: none; /* Remove list bullets */
 }
 
-#publication-links ul li {
+.single-pane-links ul li {
     margin-bottom: 10px; /* Add some spacing between links */
 }
 
@@ -181,6 +179,28 @@ ul.links-to-other-pages li {
     padding: 8px 0;
 }
 
+.cv-containers {
+    text-align: center;
+    margin-top: 20px;
+}
+
+ul.conference-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row when necessary */
+    justify-content: space-between; /* Distribute items with equal space between them */
+    list-style-type: none;
+}
+
+ul.conference-list li {
+    flex: 0 1 calc(30% - 10px); /* Calculate width for three items per row with spacing */
+    margin-bottom: 10px; /* Add bottom margin for spacing between rows */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
 /* Contact page */
 .form-group {
     margin-bottom: 20px;
@@ -220,5 +240,38 @@ textarea {
 
 .btn-submit:hover {
     background-color: #0056b3;
+}
+
+.skill-tag-with-subitems {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.skill-tag {
+    cursor: pointer;
+    background-color: #ccc;
+    color: #333;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.sub-skills {
+    display: none; /* Initially hide the sub-skills container */
+    margin-left: 20px;
+}
+
+.sub-skills .skill-tag {
+    background-color: #ccc;
+    color: #333;
+    margin: 3px 0;
+    border-radius: 3px;
+    padding: 3px 6px;
 }
 

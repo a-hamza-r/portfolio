@@ -1,0 +1,143 @@
+education:
+  - institute: "Florida State University"
+    location: "Tallahassee, FL, US"
+    degree: "Ph.D., Computer Science"
+    gpa: 3.86
+    graduation: "July 2024"
+    graduated: false
+
+  - institute: "Lahore University of Management Sciences"
+    location: "Lahore, PK"
+    degree: "Bachelors of Science (BS), Computer Science"
+    graduation: "2018"
+    graduated: true
+
+  - institute: "Government College University"
+    location: "Lahore, PK"
+    degree: "Intermediate in Sciences"
+    graduation: "2014"
+    graduated: true
+
+presentations:
+  - event: "TACAS-2023"
+    location: "Paris, FR"
+    type_event: "Conference Proceedings"
+    files:
+      - type: "pptx"
+        name: "TACAS-2023_presentation.pptx"
+      - type: "pdf"
+        name: "TACAS-2023_presentation.pdf"
+
+  - event: "FMCAD-2021"
+    location: "Tallahassee, FL (Remote)"
+    type_event: "Student Forum"
+    files:
+      - type: "pdf"
+        name: "Poster_for_FMCAD_Student_Forum.pdf"
+
+subreviews:
+  - "VMCAI-2024"
+  - "FMCAD-2023"
+  - "TACAS-2023"
+  - "FMCAD-2022"
+  - "FMCAD-2021"
+  - "ASE-2021"
+  - "ISCE-2020"
+
+awards:
+  - title: "NOP Scholarship"
+    institute: "Lahore University of Management Sciences"
+    location: "Lahore, PK"
+  - title: "Winner of National (Aagahee) Quiz Competition"
+    institute: "Aga Khan Educational Services"
+    location: "Karachi, PK"
+
+
+skills:
+  programming:
+    - item: "C++"
+      subitems:
+        - "ELFIO"
+        - "Qt"
+        - "Boost"
+        - "Valgrind"
+    - "C"
+    - "Rust"
+    - "Java"
+    - item: "Python"
+      subitems:
+        - "Pandas"
+        - "SciPy"
+        - "NumPy"
+        - "Scikit-Learn"
+        - "Matplotlib"
+    - "C#"
+    - item: "Golang"
+      subitems:
+        - "bazil.org/fuse"
+    - "Haskell"
+    - "MATLAB"
+    - "SQL"
+    - "Unix/Linux System Programming"
+    - "Bash/Shell Scripting"
+    - "Network TCP/IP Programming"
+    - item: "Assembly"
+      subitems:
+        - "y86-64"
+        - "x86 (Intel, AT&T)"
+        - "RISC (MIPS, ARM)"
+    - "HDL/VHDL"
+    - "Verilog"
+
+  tools_frameworks_libraries:
+    - "LLVM Compiler Infrastructure"
+    - "SeaHorn Verification Framework"
+    - item: "SAT/SMT Solvers"
+      subitems:
+        - "Z3"
+        - "CVC4"
+        - "CVC5"
+    - "JavaPath Finder (for Model Checking)"
+    - item: "Deep Learning Frameworks"
+      subitems:
+        - "PyTorch"
+        - "Keras"
+    - "Message Passing Interface - MPI"
+    - item: "Testing"
+      subitems:
+        - "Selenium"
+        - "JUnit"
+        - "JMeter"
+    - item: "Debuggers"
+      subitems:
+        - "GDB"
+        - "LLDB"
+    - item: "Build tools"
+      subitems:
+        - "CMake"
+        - "Ninja"
+        - "Gradle"
+    - "MongoDB"
+    - "Docker"
+  
+  web:
+    - "HTML"
+    - "CSS"
+    - "JavaScript"
+    - "React.js"
+    - "REST API"
+    - item: "Spring"
+      subitems:
+        - "Boot"
+        - "MVC"
+    - "Flask"
+
+  other:
+    - "Git/GitHub"
+    - "Bugzilla"
+    - "JIRA Bug Tracker"
+    - "Firebase"
+    - "LaTeX"
+
+  design:
+    - "Adobe Photoshop"

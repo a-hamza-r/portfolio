@@ -41,8 +41,9 @@ def publications_process():
 @app.route('/projects')
 def projects_process():
     project_path = path.join(app.root_path, 'data', 'projects.yml')
-    _research_projs = read_yaml(project_path)['research'];
-    _dev_projs = read_yaml(project_path)['development'];
+    _projs = read_yaml(project_path);
+    _research_projs = _projs['research'];
+    _dev_projs = _projs['development'];
     return render_template('projects.html', research_projs=_research_projs, dev_projs=_dev_projs,
                            basic=_basic);
 
@@ -54,19 +55,28 @@ def contact_process():
 
 @app.route('/cv')
 def cv_process():
-    education_path = path.join(app.root_path, 'data', 'education.yml')
-    _educations = read_yaml(education_path)['education'];
+    cv_path = path.join(app.root_path, 'data', 'cv.yml')
+    _cv = read_yaml(cv_path);
+    _educations = _cv['education'];
+    _presentations = _cv['presentations'];
+    _subreviews = _cv['subreviews'];
+    _awards = _cv['awards'];
+    _skills = _cv['skills'];
     experience_path = path.join(app.root_path, 'data', 'experience.yml')
-    _teachings = read_yaml(experience_path)['teachings'];
-    _jobs = read_yaml(experience_path)['jobs'];
-    return render_template('cv.html', educations=_educations, teachings=_teachings, jobs=_jobs, basic=_basic);
+    _experiences = read_yaml(experience_path);
+    _teachings = _experiences['teachings'];
+    _jobs = _experiences['jobs'];
+    publications_path = path.join(app.root_path, 'data', 'publications.yml')
+    _publications = read_yaml(publications_path)['publications'];
+    return render_template('cv.html', educations=_educations, teachings=_teachings, jobs=_jobs, publications=_publications, presentations=_presentations, subreviews=_subreviews, skills=_skills, basic=_basic);
 
 
 @app.route('/experience')
 def experience_process():
     experience_path = path.join(app.root_path, 'data', 'experience.yml')
-    _teachings = read_yaml(experience_path)['teachings'];
-    _jobs = read_yaml(experience_path)['jobs'];
+    _experiences = read_yaml(experience_path);
+    _teachings = _experiences['teachings'];
+    _jobs = _experiences['jobs'];
     return render_template('experience.html', basic=_basic, teachings=_teachings, jobs=_jobs);
 
 

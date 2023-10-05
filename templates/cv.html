@@ -4,8 +4,8 @@
 {% block title %}CV{% endblock %}
 {% block main_heading_two_pane %}CV{% endblock %}
 {% block first_pane_heading %}Education{% endblock %}
-{% block second_pane_heading %}Presentations{% endblock %}
-<!-- Although the two pane view is designed to have 1 kind of information per pane, like on experience page (teachings and jobs), I am using the same structure here to have a more compact view. I will define the left pane view to be Education, but also add Work Experience and Publications summary. Likewise, for right pane, Presentations, then Subreviews, then Skills -->
+{% block second_pane_heading %}Skills{% endblock %}
+<!-- Although the two pane view is designed to have 1 kind of information per pane, like on experience page (teachings and jobs), I am using the same structure here to have a more compact view. I will define the left pane view to be Education, but also add Work Experience and Projects summary. Likewise, for right pane, Skills, then Publications, Presentations, and Subreviews. -->
 
 {% block before_panes %}
     <div id="downloadable-cv">
@@ -46,7 +46,7 @@
     {{ macros.generate_containers(educations, customize_education, left1, right1, left2, right2) }}
 
     <br>
-    <span style="text-align: center">
+    <div class="cv-containers">
         <h2>Work Experience</h2>
         <div class="main-container-two-pane">
             <div class="first-pane">
@@ -75,14 +75,99 @@
                 </ul>
             </div>
         </div>
-    </span>
-    
+    </div> 
 
 {% endblock %}
 
 
 <!-- second pane -->
 {% block second_pane_content %}
-    
+    <div class="cv-containers">
+        {% for category, skills in skills.items() %}
+            <h2>{{ category }}</h2>
+            {% for skill in skills %}
+                {% if skill.item %}
+                    <div class="skill-tag-with-subitems" onclick="toggleSubSkills(this)">
+                        {{ skill.item }}
+                    </div>
+                    {% if skill.subitems %}
+                        <div class="sub-skills">
+                            {% for subitem in skill.subitems %}
+                                <span class="skill-tag">{{ subitem }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% else %}
+                    <div class="skill-tag">
+                        {{ skill }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <br>
+
+    <div class="cv-containers">
+        <h2>Publications</h2>
+        <ul class="links-to-other-pages">
+            {% for publication in publications %}
+                <li>
+                    <a href="#">{{ publication.venue_year }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <br>
+
+    <div class="cv-containers">
+        <h2>Presentations</h2>
+        {% for presentation in presentations %}
+            <div class="display-container">
+                <div class="single-pane-text">
+                    {% macro left(presentation) %}
+                        <div class="display-title">
+                            {{ presentation.event }}
+                        </div>
+                    {% endmacro %}
+                    {% macro right(presentation) %}
+                       <i class="fas fa-map-marker"></i>
+                        {{ presentation.location }} 
+                    {% endmacro %}
+
+                    {{ macros.create_two_side_display(presentation, left, right) }}
+                </div>
+                <div class="single-pane-links">
+                    <ul>
+                        {% for file in presentation.files %}
+                            <li>
+                            {% if file.type == "pptx" %}
+                                <a href="{{ url_for('files_process', filename='pptx/'+file.name) }}" target="_blank">
+                                    <i class="fas fa-file-powerpoint fa-lg"></i>
+                                </a>
+                            {% elif file.type == "pdf" %}
+                                <a href="{{ url_for('files_process', filename='pdfs/'+file.name) }}" target="_blank">
+                                    <i class="fas fa-file-pdf fa-lg"></i>
+                                </a>
+                            {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <br>
+
+    <div class="cv-containers">
+        <h2>Subreviewer for</h2>
+        <div>
+            <ul class="conference-list">
+                {% for subreview in subreviews %}
+                    <li>{{ subreview }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
 {% endblock %}
 
