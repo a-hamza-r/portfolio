@@ -4,16 +4,8 @@ import yaml
 
 app_dir = path.dirname(path.abspath(__file__))
 data_path = path.join(app_dir, 'data')
-templates_path = path.join(app_dir, 'templates')
-static_path = path.join(app_dir, 'static')
 
-print('app_dir: ', app_dir)
-print('data_path: ', data_path)
-print('templates_path: ', templates_path)
-print('static_path: ', static_path)
-
-app = Flask(__name__, template_folder='templates', static_folder='static');
-app.config['EXPLAIN_TEMPLATE_LOADING'] = True
+app = Flask(__name__);
 
 def read_yaml(file_path):
     with open(file_path, 'r') as file:
@@ -100,8 +92,7 @@ def experience_process():
 
 @app.route('/static/<path:filename>')
 def files_process(filename):
-    file_path = path.join(static_path,filename)
-    return app.send_static_file(file_path);
+    return app.send_static_file(filename);
 
 if __name__ == '__main__':
     app.run(debug=True)
