@@ -3,6 +3,7 @@ from os import path
 import yaml
 
 app = Flask(__name__)
+APP_DIR = path.dirname(path.realpath(__file__))
 
 def read_yaml(file_path):
     with open(file_path, 'r') as file:
@@ -91,5 +92,3 @@ def files_process(filename):
     file_path = path.join(app.root_path, 'static',  filename)
     return app.send_static_file(file_path);
 
-if __name__ == '__main__':
-    app.run(debug=True);
