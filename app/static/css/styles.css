@@ -2,6 +2,10 @@ body {
     display: flex;
 }
 
+hr {
+    border: 1px solid #ddd;
+}
+
 /* base.html */
 #sidebar {
     width: 230px;
@@ -66,8 +70,8 @@ ul.navbar li a:hover {
 /* Generic settings for display containers on multiple pages */
 .display-container {
     background-color: #f5f5f5;
-    padding: 20px; /* Add padding for spacing */
-    margin: 20px 0; /* Add margin for separation */
+    padding: 20px;
+    margin: 20px 0;
     border: 1px solid #ddd;
     border-radius: 5px; /* Rounded corners */
     display: flex; /* Use flexbox */
@@ -85,7 +89,6 @@ ul.navbar li a:hover {
 .main-container-two-pane {
     display: flex;
     justify-content: space-between;
-    width: 100%;
 }
 
 .first-pane {
@@ -181,23 +184,45 @@ ul.links-to-other-pages li {
 
 .cv-containers {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0;
+    padding: 20px 0;
+    width: 100%;
 }
 
 ul.conference-list {
+    justify-content: space-between; /* Distribute items with equal space between them */
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next row when necessary */
-    justify-content: space-between; /* Distribute items with equal space between them */
-    list-style-type: none;
 }
 
 ul.conference-list li {
-    flex: 0 1 calc(30% - 10px); /* Calculate width for three items per row with spacing */
-    margin-bottom: 10px; /* Add bottom margin for spacing between rows */
+    border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #E0E0FF;
+    flex: 0 1 calc(30% - 20px); /* Calculate width for three items per row with spacing */
+}
+
+ul.items-on-cv-page {
+    list-style-type: none;
+}
+
+ul.items-on-cv-page li {
+    padding: 10px 20px;
+    text-decoration: none;
     text-align: center;
+}
+
+ul.items-on-cv-page li:hover {
+    background-color: #E0FFE0; /* very mint green */
+}
+
+.cv-panes {
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 
@@ -244,12 +269,26 @@ textarea {
 
 .skill-tag-with-subitems {
     cursor: pointer;
+    position: relative;
     background-color: #007bff;
     color: #fff;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 5px;
     display: inline-block;
+}
+
+.skill-tag-with-subitems.active {
+    background: #0057b8; 
+}
+
+.skill-tag-with-subitems::before {
+  content: "\25BE";
+  margin-right: 5px;
+}
+
+.skill-tag-with-subitems.active::before {
+  transform: rotate(90deg);
 }
 
 .skill-tag {
@@ -262,15 +301,20 @@ textarea {
 }
 
 .sub-skills {
+    transition: height 0.3s ease;
+    position: absolute;
+    background-color: #f0f0f0; /* Background color for subskills */
+    padding: 5px;
+    border: 1px solid #ddd; /* Add a border for the subskills */
+    z-index: 2; /* Ensure subskills appear over other content */
     display: none; /* Initially hide the sub-skills container */
     margin-left: 20px;
 }
 
-.sub-skills .skill-tag {
-    background-color: #ccc;
-    color: #333;
-    margin: 3px 0;
-    border-radius: 3px;
-    padding: 3px 6px;
+.skill-tag-with-subitems:hover .sub-skills {
+    display: block;
 }
 
+.sub-skills .sub-skills {
+  margin-left: 40px;
+}

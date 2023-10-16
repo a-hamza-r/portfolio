@@ -42,19 +42,21 @@
 
     {% macro customize_education(item) %}{% endmacro %}
 
+    <div class="cv-containers">
     <!-- generate containers -->
     {{ macros.generate_containers(educations, customize_education, left1, right1, left2, right2) }}
+    </div>
 
     <!-- make below functionality as a macro, since it is highly repeated -->
-    <br>
+    <hr>
     <div class="cv-containers">
         <h2>Work Experience</h2>
-        <div class="main-container-two-pane">
+        <div class="main-container-two-pane display-container">
             <div class="first-pane">
                 <span style="text-align: center">
                     <h3>Teaching</h3>
                 </span>
-                <ul class="links-to-other-pages">
+                <ul class="items-on-cv-page">
                     {% for teaching in teachings %}
                         <li>
                             <a href="#">{{ teaching.term }}</a>
@@ -67,7 +69,7 @@
                 <span style="text-align: center">
                     <h3>Jobs</h3>
                 </span>
-                <ul class="links-to-other-pages">
+                <ul class="items-on-cv-page">
                     {% for job in jobs %}
                         <li>
                             <a href="#">{{ job.title }}</a>
@@ -78,16 +80,16 @@
         </div>
     </div> 
 
-    <br>
+    <hr>
 
     <div class="cv-containers">
         <h2>Projects</h2>
-        <div class="main-container-two-pane">
+        <div class="main-container-two-pane display-container">
             <div class="first-pane">
                 <span style="text-align: center">
                     <h3>Research</h3>
                 </span>
-                <ul class="links-to-other-pages">
+                <ul class="items-on-cv-page">
                     {% for project in research_projs %}
                         <li>
                             <a href="#">{{ project.title }}</a>
@@ -100,7 +102,7 @@
                 <span style="text-align: center">
                     <h3>Development</h3>
                 </span>
-                <ul class="links-to-other-pages">
+                <ul class="items-on-cv-page">
                     {% for project in dev_projs %}
                         <li>
                             <a href="#">{{ project.title }}</a>
@@ -131,11 +133,13 @@
             </h2>
             {% for skill in skills %}
                 {% if skill.item %}
-                    <div class="skill-tag-with-subitems" onclick="toggleSubSkills(this)">
+                    <div class="skill-tag-with-subitems"
+                        onclick="toggleSubSkills(this)"
+                        aria-expanded="false">
                         {{ skill.item }}
                     </div>
                     {% if skill.subitems %}
-                        <div class="sub-skills">
+                        <div class="sub-skills" aria-hidden="true">
                             {% for subitem in skill.subitems %}
                                 <span class="skill-tag">{{ subitem }}</span>
                             {% endfor %}
@@ -149,19 +153,23 @@
             {% endfor %}
         {% endfor %}
     </div>
-    <br>
+
+    <hr>
 
     <div class="cv-containers">
         <h2>Publications</h2>
-        <ul class="links-to-other-pages">
-            {% for publication in publications %}
-                <li>
-                    <a href="#">{{ publication.venue_year }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+        <div class="display-container">
+            <ul class="items-on-cv-page">
+                {% for publication in publications %}
+                    <li>
+                        <a href="#">{{ publication.venue_year }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-    <br>
+
+    <hr>
 
     <div class="cv-containers">
         <h2>Presentations</h2>
@@ -200,12 +208,12 @@
             </div>
         {% endfor %}
     </div>
-    <br>
+    <hr>
 
     <div class="cv-containers">
         <h2>Subreviewer for</h2>
         <div>
-            <ul class="conference-list">
+            <ul class="items-on-cv-page conference-list">
                 {% for subreview in subreviews %}
                     <li>{{ subreview }}</li>
                 {% endfor %}

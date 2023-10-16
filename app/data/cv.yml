@@ -40,6 +40,7 @@ subreviews:
   - "FMCAD-2023"
   - "TACAS-2023"
   - "FMCAD-2022"
+  - "CAV-2022"
   - "FMCAD-2021"
   - "ASE-2021"
   - "ISCE-2020"
@@ -72,7 +73,9 @@ skills:
     - item: "Golang"
       subitems:
         - "bazil.org/fuse"
-    - "Haskell"
+    - item: "Haskell"
+      subitems:
+        - "LiquidHaskell"
     - "MATLAB"
     - "Unix/Linux System Programming"
     - "Bash/Shell Scripting"
@@ -122,6 +125,7 @@ skills:
     - item: "Testing"
       subitems:
         - "Selenium"
+        - "Pytest"
         - "JUnit"
         - "JMeter"
     - item: "Debuggers"
@@ -146,6 +150,7 @@ skills:
     - "JIRA Bug Tracker"
     - "LaTeX"
     - "VirtualBox"
+    - "YAML"
     - item: "IDEs/Text Editors"
       subitems:
         - "Vim"
@@ -160,9 +165,15 @@ skills:
         - "NPM"
         - "React.js"
         - "Node.js"
-    - "REST API"
-    - "Flask"
+    - item: "REST API"
+      subitems:
+        - "Restify"
+        - "Flask"
     - "Firebase"
 
   design:
     - "Adobe Photoshop"
+
+summer_school:
+  - "SSFT22"
+  - "SSFT21"
