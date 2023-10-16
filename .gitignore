@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 .tags
 *.out
+app/.config.yml
