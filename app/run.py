@@ -90,11 +90,6 @@ def experience_process():
                            basic=_basic, teachings=_teachings, jobs=_jobs);
 
 
-@app.route('/ok_status')
-def status():
-    return '', 200  # Return a 200 OK response with an empty body
-
-
 @app.route('/static/<path:filename>')
 def files_process(filename):
     return app.send_static_file(filename);
