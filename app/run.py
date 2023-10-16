@@ -2,8 +2,18 @@ from flask import Flask, render_template
 from os import path
 import yaml
 
-app = Flask(__name__)
-APP_DIR = path.dirname(path.realpath(__file__))
+app_dir = path.dirname(path.abspath(__file__))
+data_path = path.join(app_dir, 'data')
+templates_path = path.join(app_dir, 'templates')
+static_path = path.join(app_dir, 'static')
+
+print('app_dir: ', app_dir)
+print('data_path: ', data_path)
+print('templates_path: ', templates_path)
+print('static_path: ', static_path)
+
+app = Flask(__name__, template_folder='templates', static_folder='static');
+app.config['EXPLAIN_TEMPLATE_LOADING'] = True
 
 def read_yaml(file_path):
     with open(file_path, 'r') as file:
@@ -11,9 +21,8 @@ def read_yaml(file_path):
     return data;
 
 
-basic_path = path.join(app.root_path, 'data', 'basic.yml')
+basic_path = path.join(data_path, 'basic.yml')
 _basic = read_yaml(basic_path);
-
 
 @app.route('/')
 def index_process():
@@ -22,7 +31,7 @@ def index_process():
 
 @app.route('/publications')
 def publications_process():
-    publications_path = path.join(app.root_path, 'data', 'publications.yml')
+    publications_path = path.join(data_path, 'publications.yml')
     _publications = read_yaml(publications_path)['publications'];
     for publication in _publications:
         authors = publication['authors'];
@@ -41,12 +50,12 @@ def publications_process():
 
 @app.route('/projects')
 def projects_process():
-    project_path = path.join(app.root_path, 'data', 'projects.yml')
+    project_path = path.join(data_path, 'projects.yml')
     _projs = read_yaml(project_path);
     _research_projs = _projs['research'];
     _dev_projs = _projs['development'];
-    return render_template('projects.html', research_projs=_research_projs, dev_projs=_dev_projs,
-                           basic=_basic);
+    return render_template('projects.html',
+            research_projs=_research_projs, dev_projs=_dev_projs, basic=_basic);
 
 
 @app.route('/contact')
@@ -56,23 +65,24 @@ def contact_process():
 
 @app.route('/cv')
 def cv_process():
-    cv_path = path.join(app.root_path, 'data', 'cv.yml')
+    cv_path = path.join(data_path, 'cv.yml')
     _cv = read_yaml(cv_path);
     _educations = _cv['education'];
     _presentations = _cv['presentations'];
     _subreviews = _cv['subreviews'];
     _awards = _cv['awards'];
     _skills = _cv['skills'];
-    experience_path = path.join(app.root_path, 'data', 'experience.yml')
+    experience_path = path.join(data_path, 'experience.yml')
     _experiences = read_yaml(experience_path);
     _teachings = _experiences['teachings'];
     _jobs = _experiences['jobs'];
-    publications_path = path.join(app.root_path, 'data', 'publications.yml')
+    publications_path = path.join(data_path, 'publications.yml')
     _publications = read_yaml(publications_path)['publications'];
-    projects_path = path.join(app.root_path, 'data', 'projects.yml')
+    projects_path = path.join(data_path, 'projects.yml')
     _research = read_yaml(projects_path)['research'];
     _development = read_yaml(projects_path)['development'];
-    return render_template('cv.html', educations=_educations, teachings=_teachings, jobs=_jobs,
+    return render_template('cv.html',
+                           educations=_educations, teachings=_teachings, jobs=_jobs,
                            publications=_publications, presentations=_presentations,
                            research_projs=_research, dev_projs=_development,
                            subreviews=_subreviews, skills=_skills, basic=_basic);
@@ -80,15 +90,18 @@ def cv_process():
 
 @app.route('/experience')
 def experience_process():
-    experience_path = path.join(app.root_path, 'data', 'experience.yml')
+    experience_path = path.join(data_path, 'experience.yml')
     _experiences = read_yaml(experience_path);
     _teachings = _experiences['teachings'];
     _jobs = _experiences['jobs'];
-    return render_template('experience.html', basic=_basic, teachings=_teachings, jobs=_jobs);
+    return render_template('experience.html',
+                           basic=_basic, teachings=_teachings, jobs=_jobs);
 
 
 @app.route('/static/<path:filename>')
 def files_process(filename):
-    file_path = path.join(app.root_path, 'static',  filename)
+    file_path = path.join(static_path,filename)
     return app.send_static_file(file_path);
 
+if __name__ == '__main__':
+    app.run(debug=True)
