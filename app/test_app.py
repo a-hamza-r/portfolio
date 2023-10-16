@@ -24,3 +24,19 @@ def runner(app):
 def test_api(client):
     response = client.get("/")
     assert response.status_code == 200
+
+    response = client.get("/experience")
+    assert response.status_code == 200
+
+    response = client.get("/cv")
+    assert response.status_code == 200
+
+    response = client.get("/contact")
+    assert response.status_code == 200
+
+    response = client.get("/projects")
+    assert response.status_code == 200
+
+    response = client.get("/publications")
+    assert response.status_code == 200
+
