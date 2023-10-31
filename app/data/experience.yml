@@ -6,6 +6,7 @@ teachings:
     institute: "Florida State University"
     term: "Summer 2023"
     location: "Tallahassee, FL"
+    tag: "teach-web"
 
   - title: "Graduate Teaching Assistant"
     courses:
@@ -16,6 +17,7 @@ teachings:
     institute: "Florida State University"
     term: "Spring 2023"
     location: "Tallahassee, FL"
+    tag: "teach-automata1"
 
   - title: "Graduate Teaching Assistant"
     courses:
@@ -26,6 +28,7 @@ teachings:
     institute: "Florida State University"
     term: "Fall 2022"
     location: "Tallahassee, FL"
+    tag: "teach-automata"
 
   - title: "Graduate Teaching Assistant"
     courses:
@@ -34,6 +37,7 @@ teachings:
     institute: "Florida State University"
     term: "Spring 2021"
     location: "Tallahassee, FL"
+    tag: "teach-se1"
 
   - title: "Graduate Teaching Assistant"
     courses:
@@ -42,6 +46,7 @@ teachings:
     institute: "Florida State University"
     term: "Fall 2019"
     location: "Tallahassee, FL"
+    tag: "teach-se"
 
   - title: "Teaching Assistant"
     courses:
@@ -50,6 +55,7 @@ teachings:
     institute: "Lahore University of Management Sciences"
     term: "Fall 2017"
     location: "Lahore, PK"
+    tag: "teach-os"
 
 
 jobs:
@@ -59,6 +65,7 @@ jobs:
     end: "Present"
     institute: "Florida State University"
     location: "Tallahassee, FL"
+    tag: "job-fm"
 
   - title: "Computer Science Lab Intern"
     remote: true
@@ -66,6 +73,7 @@ jobs:
     end: "March 2022"
     company: "SRI International"
     location: "Menlo Park, CA"
+    tag: "job-sri"
 
   - title: "Graduate Research Assistant"
     remote: false
@@ -73,6 +81,7 @@ jobs:
     end: "April 2020"
     institute: "Florida State University"
     location: "Tallahassee, FL"
+    tag: "job-serene"
 
   - title: "Technical Author"
     remote: true
@@ -80,6 +89,7 @@ jobs:
     end: "May 2018"
     company: "Educative.io"
     location: "US"
+    tag: "job-educative"
 
   - title: "Backend Developer"
     remote: false
@@ -87,3 +97,4 @@ jobs:
     end: "February 2018"
     company: "Black Collective"
     location: "Lahore, PK"
+    tag: "job-bc"

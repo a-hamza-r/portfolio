@@ -5,7 +5,7 @@
 {% block content %}
     <h1>Publications</h1>
     {% for publication in publications %}
-        <div class="display-container"> 
+        <div class="display-container" id="{{publication.tag}}"> 
             <div class="single-pane-text">
                 <div class="display-title">
                     <a href={{ publication.url }} title={{ publication.url }}>{{ publication.title }}</a>

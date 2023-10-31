@@ -11,3 +11,4 @@ publications:
     preprint: "TACAS_paper.pdf"
     venue_year: "TACAS-2023"
     artifact: "aeval"
+    tag: "pub-equiv-check"

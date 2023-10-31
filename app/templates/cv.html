@@ -59,7 +59,7 @@
                 <ul class="items-on-cv-page">
                     {% for teaching in teachings %}
                         <li>
-                            <a href="#">{{ teaching.term }}</a>
+                            <a href="experience#{{teaching.tag}}">{{ teaching.term }}</a>
                         </li>
                     {% endfor %}
                 </ul>
@@ -72,7 +72,7 @@
                 <ul class="items-on-cv-page">
                     {% for job in jobs %}
                         <li>
-                            <a href="#">{{ job.title }}</a>
+                            <a href="experience#{{job.tag}}">{{ job.title }}</a>
                         </li>
                     {% endfor %}
                 </ul>
@@ -92,7 +92,7 @@
                 <ul class="items-on-cv-page">
                     {% for project in research_projs %}
                         <li>
-                            <a href="#">{{ project.title }}</a>
+                            <a href="projects#{{project.tag}}">{{ project.title }}</a>
                         </li>
                     {% endfor %}
                 </ul>
@@ -105,7 +105,7 @@
                 <ul class="items-on-cv-page">
                     {% for project in dev_projs %}
                         <li>
-                            <a href="#">{{ project.title }}</a>
+                            <a href="projects#{{project.tag}}">{{ project.title }}</a>
                         </li>
                     {% endfor %}
                 </ul>
@@ -166,7 +166,7 @@
             <ul class="items-on-cv-page">
                 {% for publication in publications %}
                     <li>
-                        <a href="#">{{ publication.venue_year }}</a>
+                        <a href="publications#{{publication.tag}}">{{ publication.venue_year }}</a>
                     </li>
                 {% endfor %}
             </ul>
