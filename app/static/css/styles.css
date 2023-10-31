@@ -278,26 +278,36 @@ textarea {
     display: inline-block;
 }
 
-.skill-tag-with-subitems.active {
-    background: #0057b8; 
-}
-
 .skill-tag-with-subitems::before {
   content: "\25BE";
   margin-right: 5px;
 }
 
-.skill-tag-with-subitems.active::before {
-  transform: rotate(90deg);
+.skill-tag {
+    background-color: #ff5733;
+    color: #333;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
-.skill-tag {
+.skill-tag-no-sub {
     background-color: #ccc;
     color: #333;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 5px;
     display: inline-block;
+}
+
+.skills-container {
+    width: 100%;
+}
+
+.skill-container {
+    display: inline-block;
+    margin: 5px;
 }
 
 .sub-skills {
@@ -310,6 +320,8 @@ textarea {
     display: none; /* Initially hide the sub-skills container */
     margin-left: 20px;
 }
+
+
 
 .skill-tag-with-subitems:hover .sub-skills {
     display: block;

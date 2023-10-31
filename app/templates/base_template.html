@@ -9,13 +9,38 @@
     <!-- javascript for toggling subskills -->
     <script>
         function toggleSubSkills(skillTag) {
-            var subSkills = skillTag.nextElementSibling; // Get the next sibling element
-            if (subSkills.style.display === "block") {
-                subSkills.style.display = "none";
+            let allSubSkills = document.querySelectorAll('.sub-skills');
+
+            allSubSkills.forEach(subskill => {
+                subskill.style.display = 'none';
+            });
+
+            let subSkills = skillTag.nextElementSibling;
+            let expanded = skillTag.getAttribute("aria-expanded") === "true";
+            let hidden = subSkills.getAttribute("aria-hidden") === "true";
+
+            if (subSkills.style.display === 'block' || !hidden || expanded) {
+                subSkills.style.display = 'none';
             } else {
-                subSkills.style.display = "block";
+                subSkills.style.display = 'block';
             }
+
+            skillTag.setAttribute("aria-expanded", !expanded);
+            subSkills.setAttribute("aria-hidden", !hidden);
         }
+
+        document.addEventListener('click', function(event) {
+            let allTagsWithSubitems = document.querySelectorAll('.skill-tag-with-subitems');
+
+            if (![...allTagsWithSubitems].some(tag => tag.contains(event.target))) {
+                allTagsWithSubitems.forEach(tag => {
+                    tag.setAttribute("aria-expanded", false);
+                    let subSkills = tag.nextElementSibling;
+                    subSkills.setAttribute("aria-hidden", true);
+                    subSkills.style.display = 'none';
+                });
+            }
+        });
     </script>
 
 
