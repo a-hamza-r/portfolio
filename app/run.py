@@ -61,7 +61,7 @@ def cv_process():
     _cv = read_yaml(cv_path);
     _educations = _cv['education'];
     _presentations = _cv['presentations'];
-    _subreviews = _cv['subreviews'];
+    _reviews = _cv['reviews'];
     _awards = _cv['awards'];
     _skills = _cv['skills'];
     experience_path = path.join(data_path, 'experience.yml')
@@ -77,7 +77,7 @@ def cv_process():
                            educations=_educations, teachings=_teachings, jobs=_jobs,
                            publications=_publications, presentations=_presentations,
                            research_projs=_research, dev_projs=_development,
-                           subreviews=_subreviews, skills=_skills, basic=_basic);
+                           reviews=_reviews, skills=_skills, basic=_basic);
 
 
 @app.route('/experience')

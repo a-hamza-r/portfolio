@@ -35,15 +35,17 @@ presentations:
       - type: "pdf"
         name: "Poster_for_FMCAD_Student_Forum.pdf"
 
-subreviews:
-  - "VMCAI-2024"
-  - "FMCAD-2023"
-  - "TACAS-2023"
-  - "FMCAD-2022"
-  - "CAV-2022"
-  - "FMCAD-2021"
-  - "ASE-2021"
-  - "ISCE-2020"
+reviews:
+  - "CAV-2024 (Reviewer - Artifact Evaluation)"
+  - "VMCAI-2024 (Subreviewer)"
+  - "FMCAD-2024 (Subreviewer)"
+  - "FMCAD-2023 (Subreviewer)"
+  - "TACAS-2023 (Subreviewer)"
+  - "FMCAD-2022 (Subreviewer)"
+  - "CAV-2022 (Subreviewer)"
+  - "FMCAD-2021 (Subreviewer)"
+  - "ASE-2021 (Subreviewer)"
+  - "ISCE-2020 (Subreviewer)"
 
 awards:
   - title: "NOP Scholarship"
