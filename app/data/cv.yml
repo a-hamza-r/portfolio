@@ -126,6 +126,7 @@ skills:
         - "MongoDB"
     - item: "Testing"
       subitems:
+        - "Catch2"
         - "Selenium"
         - "Pytest"
         - "JUnit"
