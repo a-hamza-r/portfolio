@@ -59,6 +59,14 @@ teachings:
 
 
 jobs:
+  - title: "SDE Intern - ML Compilers"
+    remote: false
+    start: "May 2024"
+    end: "August 2024"
+    company: "AWS, Amazon"
+    location: "Cupertino, CA"
+    tag: "job-aws"
+
   - title: "Graduate Research Assistant"
     remote: false
     start: "May 2020"
