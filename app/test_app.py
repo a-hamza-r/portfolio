@@ -25,18 +25,18 @@ def test_api(client):
     response = client.get("/")
     assert response.status_code == 200
 
-    response = client.get("/experience")
+    response = client.get("/experience.html")
     assert response.status_code == 200
 
-    response = client.get("/cv")
+    response = client.get("/cv.html")
     assert response.status_code == 200
 
-    response = client.get("/contact")
+    response = client.get("/contact.html")
     assert response.status_code == 200
 
-    response = client.get("/projects")
+    response = client.get("/projects.html")
     assert response.status_code == 200
 
-    response = client.get("/publications")
+    response = client.get("/publications.html")
     assert response.status_code == 200
 
