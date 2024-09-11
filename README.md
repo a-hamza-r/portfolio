@@ -93,3 +93,6 @@ python freeze.py
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+For any queries, contact me at https://a-hamza-r.github.io/contact/.
