@@ -59,7 +59,7 @@ export FLASK_APP=app/run.py
 flask run
 ```
 
-The website will be available at a local address that will be displayed in the terminal, something like http://127.0.0.1:5000/. Copy and paste this address in your browser to view the website.
+The website will be available at a local address that will be displayed in the terminal, something like http://127.0.0.1:5000/. Copy and paste the provided address in your browser to view the website (do not use the above one, it is only an example).
 
 ## Making Changes
 
@@ -95,4 +95,4 @@ python freeze.py
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
-For any queries, contact me at https://a-hamza-r.github.io/contact/.
+For any queries, contact me at https://a-hamza-r.github.io/contact.
