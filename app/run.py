@@ -21,7 +21,7 @@ def index_process():
     return render_template('index.html', basic=_basic);
 
 
-@app.route('/publications.html')
+@app.route('/publications')
 def publications_process():
     publications_path = path.join(data_path, 'publications.yml')
     _publications = read_yaml(publications_path)['publications'];
@@ -40,7 +40,7 @@ def publications_process():
     return render_template('publications.html', publications=_publications, basic=_basic);
 
 
-@app.route('/projects.html')
+@app.route('/projects')
 def projects_process():
     project_path = path.join(data_path, 'projects.yml')
     _projs = read_yaml(project_path);
@@ -50,12 +50,12 @@ def projects_process():
             research_projs=_research_projs, dev_projs=_dev_projs, basic=_basic);
 
 
-@app.route('/contact.html')
+@app.route('/contact')
 def contact_process():
     return render_template('contact.html', basic=_basic);
 
 
-@app.route('/cv.html')
+@app.route('/cv')
 def cv_process():
     cv_path = path.join(data_path, 'cv.yml')
     _cv = read_yaml(cv_path);
@@ -80,7 +80,7 @@ def cv_process():
                            reviews=_reviews, skills=_skills, basic=_basic);
 
 
-@app.route('/experience.html')
+@app.route('/experience')
 def experience_process():
     experience_path = path.join(data_path, 'experience.yml')
     _experiences = read_yaml(experience_path);
