@@ -23,6 +23,13 @@
     {{ macros.institute_or_company(proj) }}
 {% endmacro %}
 
+{% macro right1(work) %}
+    {% if 'artifact' in work %}
+        <i class="fas fa-file-code fa-lg"></i>
+        <a href="https://www.github.com/{{ basic.github }}/{{ work.artifact }}">Artifact</a>
+    {% endif %}
+{% endmacro %}
+
 {% macro empty_(proj) %}{% endmacro %}
 
 
@@ -30,7 +37,7 @@
 {% block first_pane_content %}
     
     <!-- generate containers -->
-    {{ macros.generate_containers(research_projs, empty_, left1, empty_, left2, right2) }}
+    {{ macros.generate_containers(research_projs, empty_, left1, right1, left2, right2) }}
 {% endblock %}
 
 
@@ -38,6 +45,6 @@
 {% block second_pane_content %}
 
     <!-- generate containers -->
-    {{ macros.generate_containers(dev_projs, empty_, left1, empty_, left2, right2) }}
+    {{ macros.generate_containers(dev_projs, empty_, left1, right1, left2, right2) }}
 {% endblock %}
 

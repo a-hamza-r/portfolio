@@ -4,6 +4,7 @@ research:
     end: "May 2023"
     institute: "Florida State University"
     tag: "research-security"
+    artifact: "ComputerSecurity"
 
   - title: "Lockstep Composition for Unbalanced Loops"
     start: "May 2020"
@@ -11,6 +12,7 @@ research:
     institute: "Florida State University"
     artifact: "aeval"
     tag: "research-equiv-check"
+    artifact: "aeval"
 
   - title: "Verification of eBPF Programs"
     start: "October 2021"
@@ -18,12 +20,14 @@ research:
     company: "SRI International"
     artifact: "ebpf-verifier"
     tag: "research-ebpf-verif"
+    artifact: "ebpf-verifier"
 
   - title: "Comparative Study of NLP Models"
     start: "April 2020"
     end: "May 2020"
     institute: "Florida State University"
     tag: "research-deep-learning"
+    artifact: "deeplearning"
 
   - title: "Performance of Language Features"
     start: "June 2019"
@@ -36,18 +40,21 @@ research:
     end: "December 2019"
     institute: "Florida State University"
     tag: "research-data-mining"
+    artifact: "HPC-application-analysis"
 
   - title: "Automatic Assertion Generation"
     start: "November 2019"
     end: "December 2019"
     institute: "Florida State University"
     tag: "research-assert-gen"
+    artifact: "invariant-detection"
 
   - title: "Branch Prediction Performance"
     start: "October 2019"
     end: "December 2019"
     institute: "Florida State University"
     tag: "research-branch-predict"
+    artifact: "branch-prediction"
 
   - title: "Model Checking of Java Programs"
     start: "January 2017"
@@ -60,10 +67,12 @@ research:
     end: "December 2017"
     institute: "Lahore University of Management Sciences"
     tag: "research-binary-rearrange"
+    artifact: "Binary-Rearrangement"
 
 development:
   - title: "Online portfolio"
     tag: "dev-portfolio"
+    artifact: "portfolio"
 
   - title: "Compiler for a Functional Language"
     start: "September 2021"
@@ -71,30 +80,35 @@ development:
     institute: "Florida State University"
     artifact: "Compiler-For-a-Functional-Language"
     tag: "dev-compiler-constr"
+    artifact: "Compiler-For-a-Functional-Language"
 
   - title: "Modifying jEdit"
     start: "March 2019"
     end: "May 2019"
     institute: "Florida State University"
     tag: "dev-modify-jedit"
+    artifact: "JEdit-modif"
 
   - title: "Peer-to-Peer Distributed File Storage System"
     start: "August 2017"
     end: "May 2018"
     institute: "Lahore University of Management Sciences"
     tag: "dev-p2p-file-storage"
+    artifact: "p2p-file-storage"
 
   - title: "Parallelized Game of Life"
     start: "November 2017"
     end: "December 2017"
     institute: "Lahore University of Management Sciences"
     tag: "dev-hpc-game-of-life"
+    artifact: "Game-Of-Life"
 
   - title: "Pseudobot"
     start: "March 2017"
     end: "May 2017"
     institute: "Lahore University of Management Sciences"
     tag: "dev-pseudobot"
+    artifact: "Pseudobot"
 
   - title: "Dropbin - A Dropbox-like application"
     start: "February 2016"
@@ -107,6 +121,7 @@ development:
     end: "December 2016"
     institute: "Lahore University of Management Sciences"
     tag: "dev-battleship-ai"
+    artifact: "Battleship-AI"
 
   - title: "Plants vs. Zombies Game"
     start: "November 2014"
