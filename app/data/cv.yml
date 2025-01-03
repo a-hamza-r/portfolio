@@ -36,6 +36,7 @@ presentations:
         name: "Poster_for_FMCAD_Student_Forum.pdf"
 
 reviews:
+  - "TACAS-2024 (Subreviewer)"
   - "CAV-2024 (Reviewer - Artifact Evaluation)"
   - "VMCAI-2024 (Subreviewer)"
   - "FMCAD-2024 (Subreviewer)"
@@ -180,3 +181,9 @@ skills:
 summer_school:
   - "SSFT22"
   - "SSFT21"
+
+participations:
+  - Amazon Alexa Skills Mini-Hackathon
+  - NextEra Energy Hackathon
+  - Capture The Flag (CTF) Competitions
+  - Programming Competitions -- Google Code Jam, ACM, ICPC
