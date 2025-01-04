@@ -40,3 +40,8 @@ def test_api(client):
     response = client.get("/publications.html")
     assert response.status_code == 200
 
+    response = client.get("/projects/research-equiv-check")
+    assert response.status_code == 200
+
+    response = client.get("/projects/dev-test-ml-compiler")
+    assert response.status_code == 200

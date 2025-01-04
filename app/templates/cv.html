@@ -41,10 +41,11 @@
     {% endmacro %}
 
     {% macro customize_education(item) %}{% endmacro %}
+    {% macro empty_(item) %}{% endmacro %}
 
     <div class="cv-containers">
     <!-- generate containers -->
-    {{ macros.generate_containers(educations, customize_education, left1, right1, left2, right2) }}
+    {{ macros.generate_containers(educations, customize_education, left1, right1, left2, right2, empty_) }}
     </div>
 
     <!-- make below functionality as a macro, since it is highly repeated -->
@@ -92,7 +93,7 @@
                 <ul class="items-on-cv-page">
                     {% for project in research_projs %}
                         <li>
-                            <a href="projects#{{project.tag}}">{{ project.title }}</a>
+                            <a href="/projects/{{project.tag}}">{{ project.title }}</a>
                         </li>
                     {% endfor %}
                 </ul>
@@ -105,7 +106,7 @@
                 <ul class="items-on-cv-page">
                     {% for project in dev_projs %}
                         <li>
-                            <a href="projects#{{project.tag}}">{{ project.title }}</a>
+                            <a href="/projects/{{project.tag}}">{{ project.title }}</a>
                         </li>
                     {% endfor %}
                 </ul>

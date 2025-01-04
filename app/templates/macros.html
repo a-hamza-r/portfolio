@@ -22,13 +22,17 @@
 {% endmacro %}
 
 
-{% macro generate_containers(data, content_function, left1, right1, left2, right2) %}
+{% macro generate_containers(data, content_function, left1, right1, left2, right2, right3) %}
     {% for item in data %}
-    <div class="display-container make-column-view" id="{{item.tag}}">
-            {{ create_two_side_display(item, left1, right1) }}
-            {{ create_two_side_display(item, left2, right2) }}
-            {{ content_function(item) }}
-        </div>
+        {{ generate_single_container(item, content_function, left1, right1, left2, right2, right3) }}
     {% endfor %}
 {% endmacro %}
 
+{% macro generate_single_container(data, content_function, left1, right1, left2, right2, right3) %}
+    <div class="display-container make-column-view" id="{{data.tag}}">
+        {{ create_two_side_display(data, left1, right1) }}
+        {{ create_two_side_display(data, left2, right2) }}
+        {{ right3(data) }}
+        {{ content_function(data) }}
+    </div>
+{% endmacro %}

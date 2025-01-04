@@ -1,0 +1,43 @@
+{% extends "base_template.html" %}
+{% import "macros.html" as macros %}
+
+<!-- generic macros -->
+{% macro left1(proj) %}
+    <div class="display-title">
+        {{ proj.title }}
+    </div>
+{% endmacro %}
+
+{% macro left2(proj) %}
+    {% if 'start' in proj and 'end' in proj %}
+        {{ proj.start }} - {{ proj.end }}
+    {% endif %}
+{% endmacro %}
+
+{% macro right2(proj) %}
+    {{ macros.institute_or_company(proj) }}
+{% endmacro %}
+
+{% macro right1(work) %}
+    {% if 'artifact' in work %}
+        <i class="fas fa-file-code fa-lg"></i>
+        <a href="https://www.github.com/{{ basic.github }}/{{ work.artifact }}">Artifact</a>
+    {% endif %}
+{% endmacro %}
+
+{% macro details(proj) %}
+    {% if 'description' in proj %}
+        <ul>
+            {% for item in proj.description %}
+                <li>{{ item }}</li>
+            {% endfor %}
+    {% endif %}
+{% endmacro %}
+
+{% macro empty_(proj) %}{% endmacro %}
+
+{% block title %}Project{% endblock %}
+
+{% block content %}
+    {{ macros.generate_single_container(proj, details, left1, right1, left2, right2, empty_) }}
+{% endblock %}

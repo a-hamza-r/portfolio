@@ -12,3 +12,4 @@ publications:
     venue_year: "TACAS-2023"
     artifact: "aeval"
     tag: "pub-equiv-check"
+    project: "research-equiv-check"

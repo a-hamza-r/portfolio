@@ -25,6 +25,15 @@
     {{ macros.institute_or_company(work) }}
 {% endmacro %}
 
+{% macro right3(work) %}
+    <!-- to accommodate project link that is the third link in list when present -->
+    {% if work.project %}
+    <div class="extra-link-align">
+        <i class="fas fa-project-diagram fa-lg" style="font-size: 13px"></i>
+        <a href="/projects/{{ work.project }}">Project</a>
+    </div>
+    {% endif %}
+{% endmacro %}
 
 <!-- first pane -->
 {% block first_pane_content %}
@@ -60,7 +69,7 @@
     {% endmacro %}
     
     <!-- generate containers -->
-    {{ macros.generate_containers(teachings, customize_teaching, left1, right1, left2, right2) }}
+    {{ macros.generate_containers(teachings, customize_teaching, left1, right1, left2, right2, right3) }}
 {% endblock %}
 
 
@@ -75,6 +84,6 @@
     {% endmacro %}
     
     <!-- generate containers -->
-    {{ macros.generate_containers(jobs, customize_job, left1, right1, left2, right2) }}
+    {{ macros.generate_containers(jobs, customize_job, left1, right1, left2, right2, right3) }}
 {% endblock %}
 

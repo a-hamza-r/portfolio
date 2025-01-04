@@ -63,9 +63,10 @@ jobs:
     remote: false
     start: "May 2024"
     end: "August 2024"
-    company: "AWS, Amazon"
+    company: "Annapurna Labs, Amazon Web Services"
     location: "Cupertino, CA"
     tag: "job-aws"
+    project: "dev-test-ml-compiler"
 
   - title: "Graduate Research Assistant"
     remote: false
@@ -74,6 +75,7 @@ jobs:
     institute: "Florida State University"
     location: "Tallahassee, FL"
     tag: "job-fm"
+    project: "research-equiv-check"
 
   - title: "Computer Science Lab Intern"
     remote: true
@@ -82,6 +84,7 @@ jobs:
     company: "SRI International"
     location: "Menlo Park, CA"
     tag: "job-sri"
+    project: "research-ebpf-verif"
 
   - title: "Graduate Research Assistant"
     remote: false
@@ -90,6 +93,7 @@ jobs:
     institute: "Florida State University"
     location: "Tallahassee, FL"
     tag: "job-serene"
+    project: "research-perf-lang"
 
   - title: "Technical Author"
     remote: true

@@ -140,6 +140,10 @@ ul.navbar li a:hover {
     margin-bottom: 10px; /* Add some spacing between links */
 }
 
+.extra-link-align {
+    display: flex;
+    justify-content: flex-end;
+}
 
 /* Experience page */
 #course-info ul {

@@ -9,7 +9,7 @@
 <!-- generic macros -->
 {% macro left1(proj) %}
     <div class="display-title">
-        {{ proj.title }}
+        <a href="/projects/{{ proj.tag }}" title={{ proj.title }}>{{ proj.title }}</a>
     </div>
 {% endmacro %}
 
@@ -37,7 +37,7 @@
 {% block first_pane_content %}
     
     <!-- generate containers -->
-    {{ macros.generate_containers(research_projs, empty_, left1, right1, left2, right2) }}
+    {{ macros.generate_containers(research_projs, empty_, left1, right1, left2, right2, empty_) }}
 {% endblock %}
 
 
@@ -45,6 +45,6 @@
 {% block second_pane_content %}
 
     <!-- generate containers -->
-    {{ macros.generate_containers(dev_projs, empty_, left1, right1, left2, right2) }}
+    {{ macros.generate_containers(dev_projs, empty_, left1, right1, left2, right2, empty_) }}
 {% endblock %}
 

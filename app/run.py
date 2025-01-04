@@ -93,3 +93,17 @@ def experience_process():
 @app.route('/static/<path:filename>')
 def files_process(filename):
     return app.send_static_file(filename);
+
+@app.route('/projects/<tag>')
+def project_process(tag):
+    print(tag);
+    project_path = path.join(data_path, 'projects.yml')
+    _projs = read_yaml(project_path);
+    _research_projs = _projs['research'];
+    _dev_projs = _projs['development'];
+    for _proj in _research_projs:
+        if (_proj['tag'] == tag):
+            return render_template('project.html', proj=_proj, basic=_basic);
+    for _proj in _dev_projs:
+        if (_proj['tag'] == tag):
+            return render_template('project.html', proj=_proj, basic=_basic);

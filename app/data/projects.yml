@@ -5,6 +5,11 @@ research:
     institute: "Florida State University"
     tag: "research-security"
     artifact: "ComputerSecurity"
+    description:
+      - "Exploited buffer overflow and format-string vulnerabilities to execute reverse shellcode on a remote system"
+      - "Exploited race condition, spectre and meltdown vulnerabilities in CPU architecture to learn security loopholes"
+      - "Exploited reentrancy attack in smart contracts stored on Ethereum blockchain to explore web3 vulnerabilities"
+      - "Attempted Android rooting to gain root privileges in the system for normal users"
 
   - title: "Lockstep Composition for Unbalanced Loops"
     start: "May 2020"
@@ -13,6 +18,11 @@ research:
     artifact: "aeval"
     tag: "research-equiv-check"
     artifact: "aeval"
+    description:
+      - "Developing a novel technique for equivalence checking of programs where programs can have different structures"
+      - "Checking the equivalence of a program with its optimized version for (specific) compiler/hand loop optimizations
+(Loop Vectorization, Loop Unswitching, Loop Peeling)"
+      - "Uses Abstraction-Refinement for program reasoning, and SMT-based Model Checking for proof generation"
 
   - title: "Verification of eBPF Programs"
     start: "October 2021"
@@ -21,26 +31,41 @@ research:
     artifact: "ebpf-verifier"
     tag: "research-ebpf-verif"
     artifact: "ebpf-verifier"
+    description:
+      - "Verifying memory safety and information safety of eBPF programs (Linux Kernel extensions) in user-space"
+      - "Developing a Type System with Abstract Interpretation underneath for eBPF (Proof-Carrying code infrastructure)"
+      - "Generating proof certificates that can be passed to and trusted by the kernel, and are human-readable"
 
-  - title: "Comparative Study of NLP Models"
+  - title: "Deep Learning and NLP project"
     start: "April 2020"
     end: "May 2020"
     institute: "Florida State University"
     tag: "research-deep-learning"
     artifact: "deeplearning"
+    description:
+      - "Did comparative study of NLP models: BERT and XLNet, on IMDB movie reviews dataset for sentiment analysis, where we explored the pros and cons of each model and situations where one outperforms the other"
+      - "Applied Recurrent NN to Model Protein Sequences, and completed and generated new protein sequences"
+      - "Applied Convolutional NN on MNIST data and empirically tested the robustness"
 
   - title: "Performance of Language Features"
     start: "June 2019"
     end: "April 2020"
     institute: "Florida State University"
     tag: "research-perf-lang"
+    description:
+      - "Evaluated performance of software programs and language features"
+      - "Studied bug reports from bug tracking systems to identify performance bugs, their causes and fixes in  open-source systems"
+      - "Performance evaluation of two language features in C# - loops and lists"
 
-  - title: "HPC Application Analysis using Classification and Clustering"
+  - title: "HPC App Analysis using Classification/Clustering"
     start: "November 2019"
     end: "December 2019"
     institute: "Florida State University"
     tag: "research-data-mining"
     artifact: "HPC-application-analysis"
+    description:
+      - "Used classification and clustering techniques on an HPC cluster dataset by NREL, with power consumption and performance data of individual jobs, to predict how to efficiently schedule the jobs"
+      - "Techniques: Clustering (Hierarchical, Centroid), and Classification (KNN, Multi-Perceptron, Random Forest)"
 
   - title: "Automatic Assertion Generation"
     start: "November 2019"
@@ -48,6 +73,11 @@ research:
     institute: "Florida State University"
     tag: "research-assert-gen"
     artifact: "invariant-detection"
+    description:
+      - "Designed a static analysis technique for generating assertions for C programs using a portion of program trace data"
+      - "Improved time performance by using static analysis over a dynamic analysis tool, Daikon"
+      - "Used CBMC (a verification tool) to prove/disprove these assertions on a range of benchmarks from SV-COMP (Collection of Verification Tasks)"
+      - "Experimented with multiple fuzzers, e.g., AFL, to generate program traces"
 
   - title: "Branch Prediction Performance"
     start: "October 2019"
@@ -55,12 +85,18 @@ research:
     institute: "Florida State University"
     tag: "research-branch-predict"
     artifact: "branch-prediction"
+    description:
+      - "Evaluated performance of 3 branch prediction algorithms (2-Level Adaptive, Bimodal and both combined) using a simulator, SimpleScalar"
+      - "Evaluated code contained (recursive and non-recursive) functions, if-else statements, loops, and library calls"
 
   - title: "Model Checking of Java Programs"
     start: "January 2017"
     end: "May 2017"
     institute: "Lahore University of Management Sciences"
     tag: "research-jpf"
+    description:
+      - "Worked with Java PathFinder (JPF) for Model Checking and Partial Order Reduction of concurrent Java programs to detect data races"
+      - "Received a brief introduction to LLVM, including writing LLVM passes"
 
   - title: "Program Binary Rearrangement"
     start: "November 2017"
@@ -68,19 +104,33 @@ research:
     institute: "Lahore University of Management Sciences"
     tag: "research-binary-rearrange"
     artifact: "Binary-Rearrangement"
+    description:
+      - "Attempted to rearrange execution binaries using ELFIO C++ library and GNU Binutils"
+      - "Reduced page faults for loading executable code, hence reducing execution time and improving the performance"
+      - "Used Valgrind for debugging and profiling of binaries"
 
 development:
-  - title: "Online portfolio"
-    tag: "dev-portfolio"
-    artifact: "portfolio"
+  - title: "SMT-based Fuzzing Testing of an ML Compiler Front-end"
+    start: "May 2024"
+    end: "August 2024"
+    company: "Annapurna Labs, Amazon Web Services"
+    tag: "dev-test-ml-compiler"
+    description:
+    - "Generating fuzzing testing suite for HLO IR by generating model inputs for Neuron (Machine Learning) Compiler"
+    - "Using SMT-solving as an engine for generating a fuzzing tool, guided by documented constraints as specification"
+    - "Improving test coverage and allowing a programmer to better patch a bug by covering for multiple scenarios"
+    - "Providing a framework for extending the tool for other IRs"
 
   - title: "Compiler for a Functional Language"
     start: "September 2021"
     end: "December 2021"
     institute: "Florida State University"
-    artifact: "Compiler-For-a-Functional-Language"
     tag: "dev-compiler-constr"
     artifact: "Compiler-For-a-Functional-Language"
+    description:
+      - "Developed a compiler for a functional programming language based on SMT-LIB"
+      - "Implemented lexer, parser, AST/CFG generation, analyzer for logic errors, optimizations, and translation to x86"
+      - "Optimizations: Constant propagation and Simplify CFG (Merging basic blocks, and simplifying if-then-else)"
 
   - title: "Modifying jEdit"
     start: "March 2019"
@@ -88,6 +138,9 @@ development:
     institute: "Florida State University"
     tag: "dev-modify-jedit"
     artifact: "JEdit-modif"
+    description:
+      - "Added required changes (additions, deletions, and modifications) in an open-source system - jEdit"
+      - "Collaborated with a team to ensure the correctness of the system all the time"
 
   - title: "Peer-to-Peer Distributed File Storage System"
     start: "August 2017"
@@ -95,6 +148,10 @@ development:
     institute: "Lahore University of Management Sciences"
     tag: "dev-p2p-file-storage"
     artifact: "p2p-file-storage"
+    description:
+      - "Built a distributed P2P file storage system using Chord DHT architecture that serves as a backup for user data"
+      - "Ensured certain level of security (using encryption of data), fault tolerance, and load balancing"
+      - "File system was built using Golang's bazil.org/fuse library"
 
   - title: "Parallelized Game of Life"
     start: "November 2017"
@@ -102,6 +159,8 @@ development:
     institute: "Lahore University of Management Sciences"
     tag: "dev-hpc-game-of-life"
     artifact: "Game-Of-Life"
+    description:
+      - "Parallelized a well-known grid-based game, Conway's Game Of Life, using grid decomposition technique to reduce the computation time of the successive generations"
 
   - title: "Pseudobot"
     start: "March 2017"
@@ -109,12 +168,17 @@ development:
     institute: "Lahore University of Management Sciences"
     tag: "dev-pseudobot"
     artifact: "Pseudobot"
+    description:
+      - "Developed a retrieval-based chatbot with reinforcement learning; and a personal assistant to help in everyday tasks"
+      - "Implemented in Python using Chatterbot API for dialogue and Django for backend"
 
   - title: "Dropbin - A Dropbox-like application"
     start: "February 2016"
     end: "March 2016"
     institute: "Lahore University of Management Sciences"
     tag: "dev-dropbin"
+    description:
+      - "Developed Dropbin (a Dropbox replica with limited functionality) for file sharing among multiple users, using Python Socket Programming"
 
   - title: "Battleship AI"
     start: "November 2016"
@@ -122,9 +186,19 @@ development:
     institute: "Lahore University of Management Sciences"
     tag: "dev-battleship-ai"
     artifact: "Battleship-AI"
+    description:
+      - "Developed a multi-player AI of the game Battleship using probabilistic learning"
 
   - title: "Plants vs. Zombies Game"
     start: "November 2014"
     end: "December 2014"
     institute: "Lahore University of Management Sciences"
     tag: "dev-plants-vs-zombies"
+    description:
+      - "Plants vs. Zombies game developed in MATLAB as a course project"
+
+  - title: "Online portfolio"
+    tag: "dev-portfolio"
+    artifact: "portfolio"
+    description:
+      - "Developed an online portfolio using Flask library"
